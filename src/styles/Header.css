@@ -10,16 +10,29 @@
     text-align: center;
     padding: 15em 0;
     background: #222;
-  }
+}
   
   @supports (background-blend-mode: multiply) {
-    .header__hero {
+    .home {
       background: url(../imgs/shoe-3.png), radial-gradient(#444, #111);
       background-blend-mode: multiply;
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: center center;
     }
+
+    .shop {
+      padding-bottom: 318px;
+      background: url(../imgs/shoe-2.png), radial-gradient(#444, #111);
+      background-blend-mode: multiply;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+}
+
+.btn-shop {
+  display: none;
 }
 
 .header__hero {

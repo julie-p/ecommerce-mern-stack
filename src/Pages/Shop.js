@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Header from '../Components/Header';
 
 function Shop() {
     return (
         <div>
-            <h1>Shop</h1>
+            <Header />
         </div>
     )
-}
+};
 
-export default Shop
+export default Shop;
