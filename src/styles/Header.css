@@ -1,15 +1,28 @@
+.header__hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+  position: relative;
+}
+
+.header__cart {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+}
+
+.header__cart > a {
+  font-size: 1.7rem;
+  color: #fff;
+  opacity: .8;
+}
+
 .header__primaryTitle {
     font-size: 4rem;
     font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
     line-height: 1;
     text-transform: uppercase;
-}
-
-.header__hero {
-    color: white;
-    text-align: center;
-    padding: 15em 0;
-    background: #222;
 }
   
   @supports (background-blend-mode: multiply) {
@@ -37,4 +50,15 @@
 
 .header__hero {
     --clr-accent: #faa700;
+}
+
+@media screen and  (max-width: 600px) {
+  .header__cart {
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .header__cart > a {
+    font-size: 1.3rem;
+  }
 }

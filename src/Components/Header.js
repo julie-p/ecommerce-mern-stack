@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/Header.css';
 import Menu from '../Components/Menu';
 import { Link, useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
 
@@ -25,6 +27,11 @@ function Header() {
     return (
         <header className={header}>
             <Menu />
+            <div className="header__cart">
+                <Link>
+                    <FontAwesomeIcon icon={faShoppingBasket} />
+                </Link>
+            </div>
             <div className="container spacing">
                 <h1 className="header__primaryTitle">Amazing shoes at an amazing price</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium
