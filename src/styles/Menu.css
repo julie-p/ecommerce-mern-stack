@@ -100,3 +100,34 @@
     width: 100%; /* on hover la ligne grandit à 100% de width */
     transition: width .3s; /* important pour un effet smooth */
 } 
+
+@media screen and (max-width: 760px) {
+    .menu__navList {
+        flex-direction: column;
+    }
+
+    .menu__navList > li {
+        margin: 2rem 0;
+    }
+
+    .menu__navLink {
+        font-size: 2rem;
+    }
+}
+
+@media screen and  (max-width: 600px) {
+    .menu__toggler {
+        top: 2rem;
+        left: 2rem;
+        width: 2.4rem;
+        height: 1.7rem;
+    }
+
+    .open .bar.start {
+        transform: rotate(-450deg) translateX(.6rem); /* Rotation première barre */
+    }
+
+    .open .bar.end {
+        transform: rotate(-450deg) translateX(-.6rem); /* Rotation dernière barre */ 
+    }
+}
