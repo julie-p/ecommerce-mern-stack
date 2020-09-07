@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import "../styles/Menu.css";
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
 function Menu() {
 
@@ -21,10 +23,11 @@ function Menu() {
 
     return (
         <div>
+
             <div className={menuToggler} isOpen={isOpen} onClick={()=>setIsOpen(!isOpen)}>
-            <div className="bar half start"></div>
-            <div className="bar"></div>
-            <div className="bar half end"></div>
+                <div className="bar half start"></div>
+                <div className="bar"></div>
+                <div className="bar half end"></div>
             </div>
 
             <nav className={topNav}>
@@ -43,6 +46,11 @@ function Menu() {
                     </li>
                     <li>
                         <Link className="menu__navLink">Contact</Link>
+                    </li>
+                    <li>
+                        <Link class="menu__navLink">
+                            <FontAwesomeIcon icon={faShoppingBasket} />
+                        </Link>
                     </li>
                 </ul>
             </nav>

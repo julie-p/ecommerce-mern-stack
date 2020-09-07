@@ -21,7 +21,7 @@
 }
 
 .footer__distributed h3 {
-	color: #ffffff;
+	color: #fff;
 	margin: 0;
 }
 
@@ -56,7 +56,7 @@
 
 .footer__distributed .footer__center p {
 	display: inline-block;
-	color: #ffffff;
+	color: #fff;
     font-weight:400;
 	vertical-align: middle;
     margin: 0;
@@ -72,7 +72,7 @@
 }
 
 .footer__distributed .footer__center p a {
-	color: lightseagreen;
+	color: #01a3a4;
 	text-decoration: none;
 }
 

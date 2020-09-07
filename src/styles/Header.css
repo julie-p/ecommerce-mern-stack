@@ -2,8 +2,17 @@
   color: white;
   text-align: center;
   padding: 15em 0;
-  background: #222;
+  background: #eee;
   position: relative;
+}
+
+.header__hero h1 {
+  text-shadow: 2px 2px #fff;
+}
+
+.header__hero h1,
+.header__hero p {
+  color: #000;
 }
 
 .header__cart {
@@ -14,8 +23,7 @@
 
 .header__cart > a {
   font-size: 1.7rem;
-  color: #fff;
-  opacity: .8;
+  color: #444;
 }
 
 .header__primaryTitle {
@@ -31,7 +39,7 @@
   
   @supports (background-blend-mode: multiply) {
     .home {
-      background: url(../imgs/shoe-3.png), radial-gradient(#444, #111);
+      background: url(../imgs/shoe-3.png), radial-gradient(rgba(221, 221, 221, 0.856), #eee);
       background-blend-mode: multiply;
       background-attachment: fixed;
       background-repeat: no-repeat;
@@ -40,12 +48,16 @@
 
     .shop {
       padding-bottom: 385px;
-      background: url(../imgs/shoe-2.png), radial-gradient(#444, #111);
+      background: url(../imgs/shoe-2.png), radial-gradient(#fff, #eee);
       background-blend-mode: multiply;
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: center center;
     }
+}
+
+.btn-home {
+  background-color: #01a3a4;
 }
 
 .btn-shop {
