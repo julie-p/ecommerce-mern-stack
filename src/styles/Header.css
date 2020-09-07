@@ -15,8 +15,7 @@
 .header__cart > a {
   font-size: 1.7rem;
   color: #fff;
-  opacity: .7;
-  z-index: 1;
+  opacity: .8;
 }
 
 .header__primaryTitle {
