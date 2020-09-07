@@ -9,13 +9,14 @@
 .header__cart {
   position: absolute;
   top: 3rem;
-  right: 3rem;
+  right: 5rem;
 }
 
 .header__cart > a {
   font-size: 1.7rem;
   color: #fff;
   opacity: .8;
+  z-index: 1;
 }
 
 .header__primaryTitle {
@@ -23,6 +24,10 @@
     font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
     line-height: 1;
     text-transform: uppercase;
+}
+
+.title__shop {
+  margin-bottom: 3.5rem;
 }
   
   @supports (background-blend-mode: multiply) {
@@ -35,7 +40,7 @@
     }
 
     .shop {
-      padding-bottom: 318px;
+      padding-bottom: 385px;
       background: url(../imgs/shoe-2.png), radial-gradient(#444, #111);
       background-blend-mode: multiply;
       background-attachment: fixed;
