@@ -16,31 +16,23 @@
 }
 
 /* Footer left */
-
 .footer__distributed .footer__left {
 	width: 40%;
 }
 
-/* The company logo */
-
 .footer__distributed h3 {
-	color:  #ffffff;
+	color: #ffffff;
 	margin: 0;
 }
 
-.footer__distributed > h3 > span {
-	color:  lightseagreen;
-}
-
 /* Footer links */
-
 .footer__distributed .footer__links {
-	color:  #ffffff;
+	color: #ffffff;
 	margin: 20px 0 12px;
 	padding: 0;
 }
 
-.footer__distributed .footer__links > a {
+.footer__distributed .footer__links a {
 	display: inline-block;
 	line-height: 1.8;
     font-weight: 400;
@@ -50,14 +42,14 @@
 }
 
 .footer__distributed .footer__companyName {
-	color:  #fff;
+	color: #fff;
 	font-size: 14px;
 	font-weight: normal;
-	margin: 0;
+    margin: 0;
+    margin-top: 2.2em;
 }
 
 /* Footer Center */
-
 .footer__distributed .footer__center {
 	width: 35%;
 }
@@ -80,13 +72,13 @@
 }
 
 .footer__distributed .footer__center p a {
-	color:  lightseagreen;
-	text-decoration: none;;
+	color: lightseagreen;
+	text-decoration: none;
 }
 
-.footer__distributed .footer__links > a:before {
+.footer__distributed .footer__links a:before {
   content: "|";
-  font-weight:300;
+  font-weight: 300;
   font-size: 20px;
   left: 0;
   color: #fff;
@@ -99,22 +91,21 @@
 }
 
 /* Footer Right */
-
 .footer__distributed .footer__right {
 	width: 20%;
 }
 
 .footer__distributed .footer__companyAbout {
 	line-height: 20px;
-	color:  #92999f;
+	color: #92999f;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
 }
 
-.footer__distributed .footer__company-About > span {
+.footer__distributed .footer__company-About span {
 	display: block;
-	color:  #ffffff;
+	color: #ffffff;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -124,12 +115,12 @@
 	margin-top: 25px;
 }
 
-.footer__distributed .footer__icons  > a {
+.footer__distributed .footer__icons a {
 	display: inline-block;
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color: #33383b;
 	border-radius: 2px;
 
 	font-size: 20px;
@@ -153,9 +144,5 @@
 		width: 100%;
 		margin-bottom: 40px;
 		text-align: center;
-	}
-
-	.footer__distributed .footer__center > .svg-inline--fa {
-		margin-left: 0;
 	}
 }
