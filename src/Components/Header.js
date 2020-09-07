@@ -10,6 +10,7 @@ function Header() {
     let header = "header__hero";
     let btn = "btn";
     let h1;
+    let paragraph;
     switch (location.pathname) {
         case '/':
             header += " home";
@@ -20,6 +21,7 @@ function Header() {
             header += " shop";
             btn += " btn-shop";
             h1 = <h1 className="header__primaryTitle title__shop">Find your perfect shoes</h1>
+            paragraph = "paragraph-display"
             break;
         default :
             header = "header__hero";
@@ -30,7 +32,7 @@ function Header() {
             <div className="container spacing">
                 <Menu />
                 {h1}
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium
+                <p className={paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium
                     quidem enim sit sequi!</p>
                 <Link to="/shop" className={btn}>See what we have</Link>
             </div>

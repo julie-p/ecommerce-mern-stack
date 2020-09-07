@@ -4,17 +4,17 @@
 
 .menu__navList {
     position: absolute;
-    top: -350px;
+    top: -380px;
     left: 0;
     list-style: none;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 }
 
 .menu__navList > li {
-    margin: 2rem;
+    margin-right: 3rem;
 }
 
 .menu__navLink {
@@ -76,7 +76,7 @@
     }
     
     .open .bar {
-        background: linear-gradient(to right, #ddd, #eee, #fff);
+        background: #fff;
     } 
       
     .bar.half {
@@ -108,7 +108,7 @@
         position: fixed;
         right: 0;
         top: -100vh;
-        background-color: #222;
+        background-color: #000;
         border-bottom-right-radius: 100%;
         border-bottom-left-radius: 100%;
         transition: all 950ms cubic-bezier(1,0,0,1);  

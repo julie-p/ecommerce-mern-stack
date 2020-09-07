@@ -3,11 +3,18 @@
   text-align: center;
   padding: 15em 0;
   background: #eee;
-  position: relative;
 }
 
 .header__hero h1 {
   text-shadow: 2px 2px #fff;
+}
+
+.header__hero p {
+  letter-spacing: 1px;
+}
+
+.paragraph-display {
+  display: none;
 }
 
 .header__hero h1,
@@ -48,7 +55,7 @@
 
     .shop {
       padding-bottom: 385px;
-      background: url(../imgs/shoe-2.png), radial-gradient(#fff, #eee);
+      background: url(../imgs/shoe-2.png), radial-gradient(rgba(221, 221, 221, 0.856), #eee);
       background-blend-mode: multiply;
       background-attachment: fixed;
       background-repeat: no-repeat;
@@ -62,10 +69,6 @@
 
 .btn-shop {
   display: none;
-}
-
-.header__hero {
-    --clr-accent: #faa700;
 }
 
 @media screen and  (max-width: 600px) {
