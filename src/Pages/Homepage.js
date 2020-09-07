@@ -9,6 +9,7 @@ function Homepage() {
 
     return (
         <div>
+
            <Header />
 
             <main>
@@ -18,6 +19,7 @@ function Homepage() {
 
                 <Footer />
             </main>
+            
         </div>
     )
 };
