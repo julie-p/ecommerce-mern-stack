@@ -86,22 +86,3 @@ section {
 .spacing > * + * {
   margin-top: var(--spacer, 2rem);
 }
-
-
-.homepage__shoeRed {
-  --clr-inner: #faa700;
-  --clr-outer: #e48d00;
-  --clr-accent: #a1173c;
-}
-
-.homepage__shoeWhite {
-  --clr-inner: #fce4b3;
-  --clr-outer: #eac886;
-  --clr-accent: #2f4858;
-}
-
-.homepage__shoeBlue {
-  --clr-inner: #6dd5ed;
-  --clr-outer: #2193b0;
-  --clr-accent: #008951;
-}

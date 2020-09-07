@@ -1,26 +1,23 @@
-
-  /* Menu Toggler - certains styles à modifier */
 .menu__toggler {
-    position: absolute; /* Positionne le menu sur la droite de l'écran */
+    position: absolute;
     top: 3rem;
     left: 3rem;
-    /* Width & height modifie la taille du menu burger */
     width: 3.5rem;
     height: 2.4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    z-index: 1500; /* Permet au menu burger d'être toujours au dessus des autres div et donc d'être cliquable */
+    z-index: 1500;
     transition: transform 650ms ease-out;   
 }
   
 .menu__toggler.open {
-    transform: rotate(-45deg); /* Rotation on click menu open */
+    transform: rotate(-45deg);
 }
   
 .bar {
-    background: linear-gradient(to right, #fff, #F2ECEC, #eee);
+    background: linear-gradient(to right, #fff, #f2ecec, rgba(238, 238, 238, 0.651));
     width: 100%;
     height: 4px;
     border-radius: .5rem;
@@ -32,29 +29,27 @@
   
 .bar.start {
     transform-origin: right;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57); /* Animation première barre */
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
   
 .open .bar.start {
-    transform: rotate(-450deg) translateX(.8rem); /* Rotation première barre */
+    transform: rotate(-450deg) translateX(.8rem);
 }
   
 .bar.end {
-    align-self: flex-end; /* Décale la barre sur l'extrêmité droite */
+    align-self: flex-end;
     transform-origin: left;
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57); /* Animation dernière barre */
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
   
 .open .bar.end {
-    transform: rotate(-450deg) translateX(-.8rem); /* Rotation dernière barre */ 
+    transform: rotate(-450deg) translateX(-.8rem);
 }
   
-  /* Top nav - certains styles à modifier */
 .menu__topNav {
     width: 100%;
     height: 100vh;
     position: fixed;
-    /* menu s'ouvre en partant du haut */
     right: 0;
     top: -100vh;
     background-color: #faa700;
@@ -86,19 +81,18 @@
     color: #fff;
 }
   
-  /* Effet soulignage on hover */
 .menu__navLink::after {
-    content: ''; /* créé la ligne */
+    content: '';
     display: block;
-    width: 0; /* width 0 car on veut qu'elle soit inexistante au début */
+    width: 0;
     height: 1.5px;
     background: #fff;
-    transition: width .3s; /* important pour un effet smooth */
+    transition: width .3s;
 }
   
 .menu__navLink:hover::after {
-    width: 100%; /* on hover la ligne grandit à 100% de width */
-    transition: width .3s; /* important pour un effet smooth */
+    width: 100%;
+    transition: width .3s;
 } 
 
 @media screen and (max-width: 760px) {
@@ -124,10 +118,10 @@
     }
 
     .open .bar.start {
-        transform: rotate(-450deg) translateX(.6rem); /* Rotation première barre */
+        transform: rotate(-450deg) translateX(.6rem);
     }
 
     .open .bar.end {
-        transform: rotate(-450deg) translateX(-.6rem); /* Rotation dernière barre */ 
+        transform: rotate(-450deg) translateX(-.6rem); 
     }
 }
