@@ -1,4 +1,5 @@
 import React from 'react';
+import Menu from '../Components/Menu';
 import Header from '../Components/Header';
 import FeaturedItem from '../Components/FeaturedItem';
 import ProductsHome from '../Components/ProductsHome';
@@ -9,6 +10,7 @@ function Homepage() {
 
     return (
         <div>
+            <Menu />
 
            <Header />
 
@@ -18,8 +20,7 @@ function Homepage() {
                 <ProductsHome />
 
                 <Footer />
-            </main>
-            
+            </main>           
         </div>
     )
 };

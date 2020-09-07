@@ -37,7 +37,7 @@ function Footer() {
 
 			<div className="footer__right">
 				<p class="footer__companyAbout">
-					<span>About the company</span><br></br>
+					<span>About Us :</span><br></br>
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
 				</p>
 

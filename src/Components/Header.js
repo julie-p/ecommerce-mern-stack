@@ -30,7 +30,6 @@ function Header() {
     return (
         <header className={header}>
             <div className="container spacing">
-                <Menu />
                 {h1}
                 <p className={paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium
                     quidem enim sit sequi!</p>
