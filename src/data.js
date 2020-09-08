@@ -1,7 +1,7 @@
 export default {
     products: [
         {
-            name: 'Shoe 1', 
+            name: 'Vans', 
             price: 99,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-1.png',
@@ -9,7 +9,7 @@ export default {
             discount: 0
         },
         {
-            name: 'Shoe 2', 
+            name: 'Puma', 
             price: 115,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-2.png',
@@ -17,7 +17,7 @@ export default {
             discount: 0
         },
         {
-            name: 'Shoe 3', 
+            name: 'Adidas', 
             price: 120,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-3.png',
@@ -25,7 +25,7 @@ export default {
             discount: 0
         },
         {
-            name: 'Shoe 4', 
+            name: 'Nike', 
             price: 99,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-4.png',
@@ -33,7 +33,7 @@ export default {
             discount: 20
         },
         {
-            name: 'Shoe 5', 
+            name: 'Nike', 
             price: 110,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-5.png',
@@ -41,7 +41,7 @@ export default {
             discount: 20
         },
         {
-            name: 'Shoe 6', 
+            name: 'Nike Air', 
             price: 130,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-6.png',

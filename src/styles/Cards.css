@@ -1,0 +1,173 @@
+.cards__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 6rem 0;
+}
+
+.cards__container .cards__card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px -3px rgba(0,0,0,0.16);
+    margin: 4rem 5rem;
+}
+
+.cards__container .cards__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #a1173c;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.cards__container .cards__card:hover::before{
+    clip-path: circle(200px at 80% 20%);
+}
+
+.cards__container .cards__card::after {
+    content: 'Vans';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 11em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(211, 211, 211, 0.2);
+}
+
+.cards__container .cards__card .cards__imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 220px;
+    z-index: 10000;
+    transition: 0.5s;
+}
+
+.cards__container .cards__card:hover .cards__imgBx {
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.cards__container .cards__card .cards__imgBx img {
+    position: absolute;
+    left: 12%;
+    width: 270px;
+}
+
+.cards__container .cards__card .cards__contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.cards__container .cards__card:hover .cards__contentBx {
+    height: 210px;
+}
+
+.cards__container .cards__card .cards__contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #222;
+}   
+
+.cards__container .cards__card .cards__contentBx .cards__size,
+.cards__container .cards__card .cards__contentBx .cards__color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cards__container .cards__card:hover .cards__contentBx .cards__size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.cards__container .cards__card:hover .cards__contentBx .cards__color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.cards__container .cards__card .cards__contentBx .cards__size h3,
+.cards__container .cards__card .cards__contentBx .cards__color h3 {
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.cards__container .cards__card .cards__contentBx .cards__size span {
+    width: 26px;
+    height: 26px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #eee;
+    margin: 0 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.cards__container .cards__card .cards__contentBx .cards__size span:hover {
+    background: #a1173c;
+    color: #eee;
+}
+
+.cards__container .cards__card .cards__contentBx .cards__color span {
+    width: 20px;
+    height: 20px;
+    background: #e48d00;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.cards__container .cards__card .cards__contentBx .cards__color span:nth-child(2) {
+    background: #a1173c;
+}
+
+.cards__container .cards__card .cards__contentBx .cards__color span:nth-child(3) {
+    background: #000;
+}
+
+.cards__container .cards__card .cards__contentBx .cards__color span:nth-child(4) {
+    background: #34447e;
+}
+
+.cards__container .cards__card .cards__contentBx a {
+    background: #faa700;
+    margin-top: 12px;
+    text-decoration: none;
+}
+
+.cards__container .cards__card:hover .cards__contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay:  0.75s;
+}
