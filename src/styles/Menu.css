@@ -74,7 +74,7 @@
     }
 
     .menu__navLink::after {
-        background: #01a3a4;
+        background: #fff;
     }
 
     .bar {
@@ -117,7 +117,7 @@
         position: fixed;
         right: 0;
         top: -100vh;
-        background-color: #000;
+        background-color: #2193b0;
         border-bottom-right-radius: 100%;
         border-bottom-left-radius: 100%;
         transition: all 950ms cubic-bezier(1,0,0,1);  
