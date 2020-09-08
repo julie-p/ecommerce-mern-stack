@@ -7,26 +7,26 @@ function Header() {
     let location = useLocation();
     console.log(location.pathname)
 
-    let header = "header__hero";
+    let header;
     let btn = "btn";
     let h1;
     let paragraph;
     switch (location.pathname) {
         case '/':
-            header += " home";
+            header = "header__hero home";
             btn += " btn-home";
-            h1 = <h1 className="header__primaryTitle">Amazing shoes at an amazing price</h1>;
+            h1 = <h1 className="header__primaryTitle">Amazing shoes at an amazing <span className="yellow">price</span></h1>;
             break;
         case '/shop':
-            header += " shop";
+            header = "header__hero shop";
             btn += " btn-display";
-            h1 = <h1 className="header__primaryTitle title__alt">Find your perfect shoes</h1>;
+            h1 = <h1 className="header__primaryTitle title__alt">Find <span className="blue">your</span> perfect shoes</h1>;
             paragraph = "paragraph-display";
             break;
         case '/sales':
-            header += " sales";
+            header = "header__hero sales";
             btn += " btn-display";
-            h1 = <h1 className="header__primaryTitle title__alt">Mid season Sales <br/> Up to 20% off</h1>;
+            h1 = <h1 className="header__primaryTitle title__alt">Mid season <span className="red">Sales</span> <br/> Up to 20% off</h1>;
             paragraph = "paragraph-display";
         default :
             header = "header__hero";

@@ -18,7 +18,7 @@ export default {
         },
         {
             name: 'Louis Vuitton Sneakers', 
-            price: 900,
+            price: 999,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-3.png',
             featured: false,

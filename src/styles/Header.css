@@ -2,6 +2,12 @@
   text-align: center;
   padding: 15em 0;
   background: #eee;
+  padding-bottom: 385px;
+  background: url(../imgs/shoe-6.png), radial-gradient(rgba(221, 221, 221, 0.856), #eee);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .header__hero h1 {
@@ -60,15 +66,6 @@
       background-repeat: no-repeat;
       background-position: center center;
     }
-
-    .sales {
-      padding-bottom: 385px;
-      background: url(../imgs/shoe-4.png), radial-gradient(rgba(221, 221, 221, 0.856), #eee);
-      background-blend-mode: multiply;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
 }
 
 .btn-home {
@@ -77,6 +74,18 @@
 
 .btn-display {
   display: none;
+}
+
+.yellow {
+  color: #faa700;
+}
+
+.blue {
+  color: #faa700;
+}
+
+.red {
+  color: #c0392b;
 }
 
 @media screen and  (max-width: 600px) {

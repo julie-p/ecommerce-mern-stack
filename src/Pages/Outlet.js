@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from '../Components/Menu';
 import Header from '../Components/Header';
+import CardsDiscount from '../Components/CardsDiscount';
 import Footer from '../Components/Footer';
 import data from '../data';
 
@@ -14,7 +15,11 @@ function Outlet() {
     return (
         <div>
             <Menu />
+
             <Header />
+
+            <CardsDiscount />
+            
             <Footer />
         </div>
     )

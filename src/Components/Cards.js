@@ -25,7 +25,7 @@ function Cards() {
                         <a href="#" className="btn">Buy Now</a>
                     </div>
                </div>
-    })
+    });
 
     return (
         <div className="cards__container">
