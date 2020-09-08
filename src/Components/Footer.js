@@ -13,7 +13,7 @@ function Footer() {
 				<p className="footer__links">
 					<Link to="/" className="footer__link">Home</Link>
 					<Link to="/shop">Shop</Link>
-					<Link>Sales</Link>
+					<Link to="/sales">Sales</Link>
 					<Link>About</Link>		
 					<Link>Faq</Link>		
 					<Link>Contact</Link>

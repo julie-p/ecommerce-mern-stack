@@ -39,7 +39,7 @@ function Menu() {
                         <Link to="/shop" className="menu__navLink">Shop</Link>
                     </li>
                     <li>
-                        <Link className="menu__navLink">Sales</Link>
+                        <Link to="/sales" className="menu__navLink">Sales</Link>
                     </li>
                     <li>
                         <Link className="menu__navLink">About</Link>

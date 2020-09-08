@@ -1,11 +1,11 @@
 import React from 'react';
 import '../styles/Header.css';
-import Menu from '../Components/Menu';
 import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
 
     let location = useLocation();
+    console.log(location.pathname)
 
     let header = "header__hero";
     let btn = "btn";
@@ -17,12 +17,17 @@ function Header() {
             btn += " btn-home";
             h1 = <h1 className="header__primaryTitle">Amazing shoes at an amazing price</h1>;
             break;
-        case "/shop":
+        case '/shop':
             header += " shop";
-            btn += " btn-shop";
-            h1 = <h1 className="header__primaryTitle title__shop">Find your perfect shoes</h1>
-            paragraph = "paragraph-display"
+            btn += " btn-display";
+            h1 = <h1 className="header__primaryTitle title__alt">Find your perfect shoes</h1>;
+            paragraph = "paragraph-display";
             break;
+        case '/sales':
+            header += " sales";
+            btn += " btn-display";
+            h1 = <h1 className="header__primaryTitle title__alt">Mid season Sales <br/> Up to 20% off</h1>;
+            paragraph = "paragraph-display";
         default :
             header = "header__hero";
     }

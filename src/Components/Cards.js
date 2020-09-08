@@ -10,7 +10,7 @@ function Cards() {
                         <img src={product.image} alt={product.name+ "__" + key}/>
                     </div>
                     <div className="cards__contentBx">
-                        <h2>{product.name} Shoes</h2>
+                        <h2>{product.name}</h2>
                         <div className="cards__size">
                             <h3>Size :</h3>
                             <span>38</span>
@@ -18,11 +18,9 @@ function Cards() {
                             <span>40</span>
                             <span>42</span>
                         </div>
-                        <div className="cards__color">
-                            <h3>Color :</h3>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div className="cards__price">
+                            <h3>Price :</h3>
+                            <span>${product.price}</span>
                         </div>
                         <a href="#" className="btn">Buy Now</a>
                     </div>
