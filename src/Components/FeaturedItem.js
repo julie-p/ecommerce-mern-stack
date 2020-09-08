@@ -6,7 +6,7 @@ function FeaturedItem() {
 
     const featured = data.products.map((product, key) => {
         if (product.featured) {
-            return <Link className="featured__item">
+            return <Link to="/shop" className="featured__item">
                         <img src={product.image} alt={product.name+ "__" + key} className="featured__img" />
                         <p className="featured__details"><span className="price">${product.price}</span>{product.name}</p>
                    </Link>

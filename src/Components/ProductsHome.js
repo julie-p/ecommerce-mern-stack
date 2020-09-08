@@ -10,21 +10,21 @@ function ProductsHome() {
                         <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
                         <h3 className="products__title">A really nice shoe</h3>
                         <p className="products__description">{product.description}</p>
-                        <Link className="btn">Buy now</Link>
+                        <Link to="/shop" className="btn">Buy now</Link>
                    </article>
         } else if (!product.featured && product.name === 'Puma Clyde Core') {
             return <article className="product shoe-white shoe-left spacing">
                         <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
                         <h3 className="products__title">A really nice shoe</h3>
                         <p className="products__description">{product.description}</p>
-                        <Link className="btn">Buy now</Link>
+                        <Link to="/shop" className="btn">Buy now</Link>
                    </article>
         } else if (!product.featured && product.name === 'Louis Vuitton Sneakers') {
             return <article className="product shoe-blue spacing">
                         <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
                         <h3 className="products__title">A really nice shoe</h3>
                         <p className="products__description">{product.description}</p>
-                        <Link className="btn">Buy now</Link>
+                        <Link to="/shop" className="btn">Buy now</Link>
                    </article>
         }
     });

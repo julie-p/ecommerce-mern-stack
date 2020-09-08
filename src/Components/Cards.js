@@ -22,7 +22,7 @@ function Cards() {
                             <h3>Price :</h3>
                             <span>${product.price}</span>
                         </div>
-                        <a href="#" className="btn">Buy Now</a>
+                        <button>Buy Now</button>
                     </div>
                </div>
     });
