@@ -47,7 +47,7 @@
 
 .cards__container .cards__card .cards__imgBx {
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     width: 100%;
     height: 220px;

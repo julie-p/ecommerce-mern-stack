@@ -48,12 +48,13 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
-        z-index: 1500;
+        z-index: 300000;
         transition: transform 650ms ease-out;   
     }
     .menu__toggler.open {
         transform: rotate(-45deg);
         position: fixed;
+        z-index: 200000;
     }
       
     .menu__navList {
@@ -127,6 +128,7 @@
     .menu__topNav.open {
         top: 0;
         border-radius: initial;
+        z-index: 100000;
     }
 }
 
