@@ -26,7 +26,7 @@ export default {
         },
         {
             name: 'Jordan 12 Retro Gym', 
-            price: 99,
+            price: 199,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-4.png',
             featured: true,
@@ -34,7 +34,7 @@ export default {
         },
         {
             name: 'Adidas Ultraboost', 
-            price: 110,
+            price: 130,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-5.png',
             featured: true,
@@ -42,7 +42,7 @@ export default {
         },
         {
             name: 'Off-White x Air Jordan', 
-            price: 130,
+            price: 180,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-6.png',
             featured: true,
