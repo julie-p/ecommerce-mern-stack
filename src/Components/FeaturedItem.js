@@ -14,16 +14,14 @@ function FeaturedItem() {
     });
 
     return (
-        <div>
-            <section className="featured">
-                <div className="container">
-                    <h2 className="section-title">Featured Products</h2>
-                </div>  
-                <div className="split">
-                    {featured}
-                </div>
-            </section> 
-        </div>
+        <section className="featured">
+            <div className="container">
+                <h2 className="section-title">Featured Products</h2>
+            </div>  
+            <div className="split">
+                {featured}
+            </div>
+        </section> 
     )
 };
 

@@ -28,9 +28,9 @@ function Cards() {
     });
 
     return (
-        <div className="cards__container">
+        <section className="cards__container">
             {shoes}
-        </div>
+        </section>
     )
 };
 

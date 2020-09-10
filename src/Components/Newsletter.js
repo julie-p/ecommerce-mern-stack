@@ -9,7 +9,7 @@ function Newsletter() {
         <section className="newsletter">
             <div className="newsletter__container">
                 <h1>Subscribe
-                    <span> To Our Newsletter</span>
+                    <span> To our newsletter</span>
                 </h1>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!</p>
