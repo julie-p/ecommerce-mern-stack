@@ -18,10 +18,9 @@ function Homepage() {
             <main>
                 <FeaturedItem />
 
-                <ProductsHome />
-
                 <Newsletter />
-
+                
+                <ProductsHome />
             </main> 
             
             <Footer />          
