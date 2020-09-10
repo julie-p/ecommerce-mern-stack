@@ -37,6 +37,10 @@
     transition: width .3s;
 } 
 
+.active {
+    color: #2193b0;
+}
+
 @media screen and (max-width: 850px) {
     .menu__toggler {
         position: absolute;
@@ -76,6 +80,10 @@
 
     .menu__navLink::after {
         background: #fff;
+    }
+
+    .active {
+        color: #fff;
     }
 
     .bar {

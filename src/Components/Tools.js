@@ -7,7 +7,6 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 function Tools() {
 
     let location = useLocation();
-    console.log(location.pathname);
 
     let h3;
     switch (location.pathname) {

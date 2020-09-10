@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "../styles/Menu.css";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,6 +21,27 @@ function Menu() {
         break;
     };
 
+    let location = useLocation();
+
+    let activeHome = "menu__navLink";
+    let activeShop = "menu__navLink";
+    let activeSales = "menu__navLink";
+
+    switch (location.pathname) {
+        case '/':
+            activeHome += " active";
+            break;
+        case '/shop':
+            activeShop += " active";
+            break;
+        case '/sales':
+            activeSales += " active";
+            break;
+        default :
+            activeHome = "menu__navLink active";
+            break;
+    };
+
     return (
         <div>
 
@@ -33,13 +54,13 @@ function Menu() {
             <nav className={topNav}>
                 <ul className="menu__navList">
                     <li>
-                        <Link to="/" className="menu__navLink">Home</Link>
+                        <Link to="/" className={activeHome}>Home</Link>
                     </li>
                     <li>
-                        <Link to="/shop" className="menu__navLink">Shop</Link>
+                        <Link to="/shop" className={activeShop}>Shop</Link>
                     </li>
                     <li>
-                        <Link to="/sales" className="menu__navLink">Sales</Link>
+                        <Link to="/sales" className={activeSales}>Sales</Link>
                     </li>
                     <li>
                         <Link className="menu__navLink">About</Link>
