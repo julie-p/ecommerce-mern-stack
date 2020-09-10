@@ -36,7 +36,8 @@ function Tools() {
             {h3}
 
             <div className="tools__filter" open={open} onClick={() => setOpen(!open)}>
-                <h3>/Filter by/</h3>
+                <h3 style={{display: open ? "none" : "block"}}>/Filter +/</h3>
+                <h3 style={{display: open ? "block" : "none"}}>/Filter -/</h3>
                 <div className={filter}>
                     <ul>
                         <li>Lowest price</li>
