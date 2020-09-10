@@ -11,6 +11,7 @@
     z-index: 300000;
     transition: transform 650ms ease-out;   
 }
+
 .menu__toggler.open {
     transform: rotate(-45deg);
     position: fixed;

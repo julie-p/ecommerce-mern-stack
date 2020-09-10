@@ -32,7 +32,22 @@
 .tools__dropdown li {
     cursor: pointer;
     color: #000;
+    font-size: 16px;
 }
+
+.tools__dropdown li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: .5px;
+    background: #000;
+    transition: width .3s;
+}
+  
+.tools__dropdown li:hover::after {
+    width: 100%;
+    transition: width .3s;
+} 
 
 .tools__searchBar {
     cursor: pointer;

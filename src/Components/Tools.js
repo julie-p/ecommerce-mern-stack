@@ -39,8 +39,8 @@ function Tools() {
                 <h3>/Filter by/</h3>
                 <div className={filter}>
                     <ul>
-                        <li>Ascending</li>
-                        <li>Descending</li>
+                        <li>Lowest price</li>
+                        <li>Highest price</li>
                     </ul>
             </div>
             </div>
