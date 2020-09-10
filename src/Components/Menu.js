@@ -67,11 +67,6 @@ function Menu() {
                     <li>
                         <Link className="menu__navLink">Contact</Link>
                     </li>
-                    <li>
-                        <Link class="menu__navLink">
-                            <FontAwesomeIcon icon={faShoppingBasket} />
-                        </Link>
-                    </li>
                 </ul>
             </nav>
         </div>

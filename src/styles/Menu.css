@@ -1,26 +1,94 @@
 .menu__toggler {
-    display: none;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 3.5rem;
+    height: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 300000;
+    transition: transform 650ms ease-out;   
+}
+.menu__toggler.open {
+    transform: rotate(-45deg);
+    position: fixed;
+    z-index: 200000;
+}
+
+.bar {
+    background-color: #2193b0;
+    background-image: linear-gradient(160deg, #2193b0 0%, #a1e4dc 100%);
+    width: 100%;
+    height: 4px;
+    border-radius: .5rem;
+}
+
+.open .bar {
+    background: #fff;
+} 
+  
+.bar.half {
+    width: 50%;
+}
+  
+.bar.start {
+    transform-origin: right;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+  
+.open .bar.start {
+    transform: rotate(-450deg) translateX(.8rem);
+}
+  
+.bar.end {
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+  
+.open .bar.end {
+    transform: rotate(-450deg) translateX(-.8rem);
+}
+
+.menu__topNav {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: -100vh;
+    background-color: #2193b0;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 950ms cubic-bezier(1,0,0,1);  
+    z-index: 1;
+}
+  
+.menu__topNav.open {
+    top: 0;
+    border-radius: initial;
+    z-index: 100000;
 }
 
 .menu__navList {
-    position: absolute;
-    top: -380px;
+    top: 0;
     left: 0;
     list-style: none;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    margin: 2.5rem 0 0 2rem;
+    justify-content: center;
 }
 
 .menu__navList > li {
-    margin-right: 3rem;
+    margin-right: 5rem;
 }
 
 .menu__navLink {
-    font-size: 1rem;
-    color: #000;
+    color: #fff;
+    font-size: 3.5rem;
 }
   
 .menu__navLink::after {
@@ -28,7 +96,7 @@
     display: block;
     width: 0;
     height: 2px;
-    background: #000;
+    background: #fff;
     transition: width .3s;
 }
   
@@ -37,119 +105,29 @@
     transition: width .3s;
 } 
 
-.active {
-    color: #2193b0;
+@media screen and (max-width: 1300px) {
+    .menu__navLink {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 850px) {
-    .menu__toggler {
-        position: absolute;
-        top: 3rem;
-        left: 3rem;
-        width: 3.5rem;
-        height: 2.4rem;
+    .menu__navList {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-        z-index: 300000;
-        transition: transform 650ms ease-out;   
-    }
-    .menu__toggler.open {
-        transform: rotate(-45deg);
-        position: fixed;
-        z-index: 200000;
-    }
-      
-    .menu__navList {
-        position: initial;
-        top: 0;
-        margin: 0;
-        margin-top: 10rem;
-        flex-direction: column;
     }
 
-    .menu__navList > li {
-        margin: 1rem 0;
-    }
-
-    .menu__navLink {
-        color: #fff;
-        font-size: 2rem;
-    }
-
-    .menu__navLink::after {
-        background: #fff;
-    }
-
-    .active {
-        color: #fff;
-    }
-
-    .bar {
-        background: linear-gradient(to right, #444, #222);
-        width: 100%;
-        height: 4px;
-        border-radius: .5rem;
-    }
-    
-    .open .bar {
-        background: #fff;
-    } 
-      
-    .bar.half {
-        width: 50%;
-    }
-      
-    .bar.start {
-        transform-origin: right;
-        transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-    }
-      
-    .open .bar.start {
-        transform: rotate(-450deg) translateX(.8rem);
-    }
-      
-    .bar.end {
-        align-self: flex-end;
-        transform-origin: left;
-        transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-    }
-      
-    .open .bar.end {
-        transform: rotate(-450deg) translateX(-.8rem);
-    }
-      
-    .menu__topNav {
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        right: 0;
-        top: -100vh;
-        background-color: #2193b0;
-        border-bottom-right-radius: 100%;
-        border-bottom-left-radius: 100%;
-        transition: all 950ms cubic-bezier(1,0,0,1);  
-        z-index: 1;
-    }
-      
-    .menu__topNav.open {
-        top: 0;
-        border-radius: initial;
-        z-index: 100000;
+    .menu__navList li {
+        margin: 0 0 2rem 0;
     }
 }
 
-@media screen and  (max-width: 600px) {
+@media screen and (max-width: 600px) {
     .menu__toggler {
         top: 2rem;
         left: 2rem;
         width: 2.4rem;
         height: 1.7rem;
-    }
-
-    .menu__navList {
-        margin-top: 7rem;
     }
 
     .open .bar.start {
