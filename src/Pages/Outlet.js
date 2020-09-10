@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from '../Components/Menu';
 import Header from '../Components/Header';
+import Tools from '../Components/Tools';
 import CardsDiscount from '../Components/CardsDiscount';
 import Footer from '../Components/Footer';
 import data from '../data';
@@ -17,6 +18,8 @@ function Outlet() {
             <Menu />
 
             <Header />
+
+            <Tools />
 
             <CardsDiscount />
             
