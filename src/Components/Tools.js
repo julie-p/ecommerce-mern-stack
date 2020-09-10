@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import data from '../data';
 import '../styles/Tools.css';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,7 +19,7 @@ function Tools() {
             break;
         default: 
             h3 = "";
-    }
+    };
 
     return (
         <div className="tools__container">
@@ -29,8 +30,13 @@ function Tools() {
             </div>
 
             <div className="tools__searchBar">
-                <FontAwesomeIcon icon={faSearch} />
+                <input type="search" name="search" className="tools__input" autoComplete="off" required/>
+                <label for="search" className="tools__label">
+                    <span className="tools__contentName">Search</span>
+                </label>
             </div>
+
+
             
         </div>
     )

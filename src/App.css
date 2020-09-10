@@ -1,3 +1,5 @@
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css")
+
 *,
 *::before,
 *::after {
@@ -14,6 +16,11 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+input {
+  outline: none;
+  border: none;
 }
 
 h1,
