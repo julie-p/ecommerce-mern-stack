@@ -70,7 +70,7 @@
 
     .tools__input:focus + .tools__label .tools__contentName, 
     .tools__input:valid + .tools__label .tools__contentName {
-        transform: translateY(-150%);
+        transform: translateY(-110%);
         font-weight: 700;
     }
 }
