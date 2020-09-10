@@ -41,10 +41,13 @@ function Menu() {
             break;
     };
 
+    const toggleMenu = () => {
+        setIsOpen(!isOpen)
+    };
+
     return (
         <div>
-
-            <div className={menuToggler} isOpen={isOpen} onClick={()=> setIsOpen(!isOpen)}>
+            <div className={menuToggler} isOpen={isOpen} onClick={()=> toggleMenu()}>
                 <div className="bar half start"></div>
                 <div className="bar"></div>
                 <div className="bar half end"></div>

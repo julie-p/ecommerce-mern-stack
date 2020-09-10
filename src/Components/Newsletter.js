@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function Newsletter() {
+    
     return (
-        <div className="newsletter">
+        <section className="newsletter">
             <div className="newsletter__container">
                 <h1>Subscribe
                     <span> To Our Newsletter</span>
@@ -20,7 +21,7 @@ function Newsletter() {
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 };
 

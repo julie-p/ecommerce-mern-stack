@@ -7,7 +7,6 @@ import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg
 function Footer() {
     return (
         <footer className="footer__distributed">
-
 			<div className="footer__left">
                 <h3>Company Name</h3>
 				<p className="footer__links">
@@ -25,11 +24,9 @@ function Footer() {
 				<div>
 					<p><span>129 Windfall Lane</span>Santa Ana, CA 92704</p>
 				</div>
-
 				<div>
 					<p>+1.555.555.5555</p>
 				</div>
-
 				<div>
 					<p><a href="mailto:example@company.com">example@company.com</a></p>
 				</div>
@@ -40,14 +37,12 @@ function Footer() {
 					<span>About Us :</span><br></br>
 					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
 				</p>
-
 				<div className="footer__icons">
                     <Link><FontAwesomeIcon icon={faFacebook}/></Link>
 					<Link><FontAwesomeIcon icon={faTwitter}/></Link>
 					<Link><FontAwesomeIcon icon={faInstagram}/></Link>
 				</div>
 			</div>
-
 		</footer>
     )
 };
