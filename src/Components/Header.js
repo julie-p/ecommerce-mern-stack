@@ -21,7 +21,7 @@ function Header() {
         case '/shop' :
             header = "header__hero shop";
             btn += " btn-display";
-            h1 = <h1 className="header__primaryTitle title__alt">Find <span className="blue">your</span> perfect shoes</h1>;
+            h1 = <h1 className="header__primaryTitle title__alt">Find <span className="yellow">your</span> perfect shoes</h1>;
             paragraph = "paragraph-display";
             break;
         case '/sales' :

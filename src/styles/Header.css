@@ -69,7 +69,7 @@
 }
 
 .btn-home {
-  background-color: #01a3a4;
+  background-color: #2bbadd;
 }
 
 .btn-display {
@@ -77,15 +77,11 @@
 }
 
 .yellow {
-  color: #faa700;
-}
-
-.blue {
-  color: #faa700;
+  color: #fcb322;
 }
 
 .red {
-  color: #c0392b;
+  color: #bb1c46;
 }
 
 @media screen and  (max-width: 600px) {

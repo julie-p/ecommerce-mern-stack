@@ -43,7 +43,7 @@
     left: 10%;
     padding: 75% 75% 0 0;
     border-radius: 50%;
-    background: #2193b0;
+    background: #2bbadd;
     z-index: -1;
 }
   
@@ -111,18 +111,18 @@
 
 .shoe-red {
     --clr-inner: #eac886;
-    --clr-outer: #e48d00;
-    --clr-accent: #a1173c;
+    --clr-outer: #ff9e02;
+    --clr-accent: #bb1c46;
 }
   
 .shoe-white {
     --clr-inner: #fce4b3;
-    --clr-outer: #eac886;
-    --clr-accent: #01a3a4;
+    --clr-outer: #f8dca0;
+    --clr-accent: #04b4b4;
 }
   
 .shoe-blue {
     --clr-inner: #6dd5ed;
-    --clr-outer: #2193b0;
-    --clr-accent: #faa700;
+    --clr-outer: #2bbadd;
+    --clr-accent: #fcb322;
 }

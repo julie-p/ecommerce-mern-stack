@@ -5,7 +5,7 @@
 }
 
 .newsletter__container {
-    background: linear-gradient(125deg, #2193b0, #ccebe7);
+    background: linear-gradient(125deg, #2bbadd, #c2e9e4); 
     width: 600px;
     padding: 80px;
     text-align: center;
@@ -62,7 +62,7 @@
 }
 
 .newsletter__txtb button {
-    background: #00cec9;
+    background: #26a7c7;
     color: #fff;
     border: 0;
     border-radius:  50%;
@@ -74,8 +74,10 @@
     outline: none;
     cursor: pointer;
     transition: .3s linear;
+    opacity: .6;
 }
 
 .newsletter__txtb button:hover {
-    opacity: .5;
+    opacity: .7; 
+    background: linear-gradient(125deg, #2bbadd, #c2e9e4);
 }
