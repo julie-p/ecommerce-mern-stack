@@ -3,6 +3,7 @@ import Menu from '../Components/Menu';
 import Header from '../Components/Header';
 import FeaturedItem from '../Components/FeaturedItem';
 import ProductsHome from '../Components/ProductsHome';
+import Newsletter from '../Components/Newsletter';
 import Footer from '../Components/Footer';
 import '../styles/Homepage.css';
 
@@ -12,15 +13,18 @@ function Homepage() {
         <div>
             <Menu />
 
-           <Header />
+            <Header />
 
             <main>
                 <FeaturedItem />
 
                 <ProductsHome />
 
-                <Footer />
-            </main>           
+                <Newsletter />
+
+            </main> 
+            
+            <Footer />          
         </div>
     )
 };

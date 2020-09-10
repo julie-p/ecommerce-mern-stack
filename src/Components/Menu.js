@@ -11,7 +11,7 @@ function Menu() {
     let menuToggler = "menu__toggler";
     let topNav = "menu__topNav";
     switch (isOpen) {
-        case true:
+        case true :
         menuToggler += " open";
         topNav += " open";
         break;
@@ -26,7 +26,6 @@ function Menu() {
     let activeHome = "menu__navLink";
     let activeShop = "menu__navLink";
     let activeSales = "menu__navLink";
-
     switch (location.pathname) {
         case '/':
             activeHome += " active";
@@ -45,7 +44,7 @@ function Menu() {
     return (
         <div>
 
-            <div className={menuToggler} isOpen={isOpen} onClick={()=>setIsOpen(!isOpen)}>
+            <div className={menuToggler} isOpen={isOpen} onClick={()=> setIsOpen(!isOpen)}>
                 <div className="bar half start"></div>
                 <div className="bar"></div>
                 <div className="bar half end"></div>

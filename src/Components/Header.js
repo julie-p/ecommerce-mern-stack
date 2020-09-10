@@ -11,18 +11,18 @@ function Header() {
     let h1;
     let paragraph;
     switch (location.pathname) {
-        case '/':
+        case '/' :
             header = "header__hero home";
             btn += " btn-home";
             h1 = <h1 className="header__primaryTitle">Amazing shoes at an amazing <span className="yellow">price</span></h1>;
             break;
-        case '/shop':
+        case '/shop' :
             header = "header__hero shop";
             btn += " btn-display";
             h1 = <h1 className="header__primaryTitle title__alt">Find <span className="blue">your</span> perfect shoes</h1>;
             paragraph = "paragraph-display";
             break;
-        case '/sales':
+        case '/sales' :
             header = "header__hero sales";
             btn += " btn-display";
             h1 = <h1 className="header__primaryTitle title__alt">Mid season <span className="red">Sales</span> <br/> Up to 20% off</h1>;
