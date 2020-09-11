@@ -54,7 +54,9 @@
 }
 
 .tools__input {
+    border: none;
     border-bottom: solid 1px #000;
+    outline: none;
     width: 60%;
 	padding: 9px 10px 9px 32px;
     margin-left: 1em;

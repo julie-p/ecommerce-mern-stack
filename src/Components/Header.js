@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/Header.css';
+import Links from './Links';
 import { Link, useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
 
@@ -35,6 +34,7 @@ function Header() {
 
     return (
         <header className={header}>
+            <Links />
             <div className="container spacing">
                 {h1}
                 <p className={paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium

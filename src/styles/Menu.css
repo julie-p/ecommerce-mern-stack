@@ -53,6 +53,24 @@
     transform: rotate(-450deg) translateX(-.8rem);
 }
 
+.menu__icon {
+    display: flex;
+    position: absolute;
+    top: 3.3rem;
+    left: 8.5rem;
+    font-size: 1.4rem;
+    color: #222;
+    opacity: .7;
+}
+
+.menu__icon span {
+    position: absolute;
+    top: .5rem;
+    left: 1rem;
+    margin-left: .8rem;
+    font-size: 14px;
+}
+
 .menu__topNav {
     width: 100%;
     height: 100vh;
@@ -137,5 +155,16 @@
 
     .open .bar.end {
         transform: rotate(-450deg) translateX(-.6rem); 
+    }
+
+    .menu__icon {
+        top: 2.3rem;
+        left: 6rem;
+        font-size: 1rem;
+    }
+
+    .menu__icon span {
+        left: .8rem;
+        margin-left: .5rem;
     }
 }

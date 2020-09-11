@@ -1,0 +1,33 @@
+.links__cart {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+}
+
+.links__cart span {
+    margin: 0 .6rem;
+    color: #2bbadd;
+}
+
+.links__login {
+    color: #279cb9;
+    font-weight: 500;
+}
+
+.cart {
+    color: #fff;
+}
+
+.links__span {
+    color: #fff;
+}
+
+@media screen and  (max-width: 600px) {
+    .links__cart {
+        top: 2rem;
+    }
+
+    .links__cart a {
+        font-size: .9rem;
+    }
+}
