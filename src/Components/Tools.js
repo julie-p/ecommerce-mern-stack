@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import data from '../data';
 import '../styles/Tools.css';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function Tools() {
 

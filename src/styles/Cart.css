@@ -1,5 +1,5 @@
 .cart__page {
-    margin: 80px 80px 20px 80px;
+    /* margin: 80px 80px 20px 80px; */
     padding: 1rem;
     color: #594F50;
 }
@@ -16,10 +16,11 @@
     transition: 0.5s ease-in-out;
     opacity: .7;
     z-index: -100;
+    overflow-x: hidden;
 }
 
 .cart__page h1 {
-    margin: 4rem 0 3rem 0;
+    margin: 8rem 0 3rem 0;
     font-size: 32px;
     opacity: .9;
     color: #444;
@@ -98,7 +99,7 @@ th:last-child {
 .cart__checkout {
     background: linear-gradient(125deg, #2bbadd, #c2e9e4);
     border: none;
-    margin: 3rem 0;
+    margin: 2rem 0;
     margin-left: 11.1rem;
     padding: 1rem 0;
     width: 60%;
@@ -130,6 +131,10 @@ th:last-child {
 }
 
 @media screen and (max-width: 565px) {
+    td input {
+        width: 50px;
+    }
+
     .cart__totalPrice {
         background-color: transparent;
     }

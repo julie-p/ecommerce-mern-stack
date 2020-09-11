@@ -55,7 +55,7 @@ function Menu() {
 
             <Link to="/cart" className="menu__icon">
                 <FontAwesomeIcon icon={faShoppingBasket} />
-                <span>(0)</span>
+                <span>(3)</span>
             </Link>
 
             <nav className={topNav}>

@@ -11,8 +11,7 @@ function Cart() {
             <Menu />
             <Links />
 
-            <main>
-                <section className="cart__page">
+                <section className="cart__page container">
                     <h1>My Cart</h1>
                     <table>
                         <tr>
@@ -28,13 +27,13 @@ function Cart() {
                                     <img src="../imgs/shoe-1.png" />
                                     <div>
                                         <p>Vans Old Skool</p>
-                                        <small>Size: 40</small><br/>
+                                        <small>Size : 40</small><br/>
                                         <a href="">Remove</a>
                                     </div>
 
                                 </div>
                             </td>
-                            <td><input type="number"/></td>
+                            <td><input type="number" value="1"/></td>
                             <td>$99</td>
                             <td>$99</td>
                         </tr>
@@ -45,13 +44,13 @@ function Cart() {
                                     <img src="../imgs/shoe-6.png" />
                                     <div>
                                         <p>Off White x Air Jordan</p>
-                                        <small>Size: 40</small><br/>
+                                        <small>Size : 40</small><br/>
                                         <a href="">Remove</a>
                                     </div>
 
                                 </div>
                             </td>
-                            <td><input type="number"/></td>
+                            <td><input type="number" value="1"/></td>
                             <td>$180</td>
                             <td>$180</td>
                         </tr>
@@ -62,13 +61,13 @@ function Cart() {
                                     <img src="../imgs/shoe-2.png" />
                                     <div>
                                         <p>Puma Clyde Core</p>
-                                        <small>Size: 40</small><br/>
+                                        <small>Size : 40</small><br/>
                                         <a href="">Remove</a>
                                     </div>
 
                                 </div>
                             </td>
-                            <td><input type="number"/></td>
+                            <td><input type="number" value="1"/></td>
                             <td>$115</td>
                             <td>$115</td>
                         </tr>
@@ -77,7 +76,7 @@ function Cart() {
                     <div class="cart__totalPrice">
                         <table>
                             <tr>
-                                <td>Total</td>
+                                <td>Total :</td>
                                 <td>$394.00</td>
                             </tr>
                             <div class="cart__btn">
@@ -93,7 +92,6 @@ function Cart() {
                 <section>
                     <Newsletter />
                 </section>
-            </main>
             
             <Footer />
         </div>
