@@ -77,7 +77,7 @@ function Cart() {
                     <div class="cart__totalPrice">
                         <table>
                             <tr>
-                                <td>Subtotal</td>
+                                <td>Total</td>
                                 <td>$394.00</td>
                             </tr>
                             <div class="cart__btn">
