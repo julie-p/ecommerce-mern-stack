@@ -76,7 +76,6 @@ td img {
 
 .cart__totalPrice {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
     background-color: #cfebf193;
     height: 200px;
@@ -122,6 +121,11 @@ th:last-child {
 
     .cart__page::before {
         clip-path: circle(420px at 90% 10%);
+    }
+
+    .cart__totalPrice td:first-child {
+        position: absolute;
+        right: 16.6rem;
     }
 }
 
