@@ -57,10 +57,10 @@ td {
 }
 
 td input {
-    width: 40px;
+    width: 60px;
     height: 30px;
     padding: 5px;
-    border: 1px solid #999;
+    border: 1px solid rgb(184, 182, 182);
 }
 
 td a {

@@ -34,7 +34,7 @@ function Cart() {
 
                                 </div>
                             </td>
-                            <td><input type="number" value="1"/></td>
+                            <td><input type="number"/></td>
                             <td>$99</td>
                             <td>$99</td>
                         </tr>
@@ -51,7 +51,7 @@ function Cart() {
 
                                 </div>
                             </td>
-                            <td><input type="number" value="1"/></td>
+                            <td><input type="number"/></td>
                             <td>$180</td>
                             <td>$180</td>
                         </tr>
@@ -68,7 +68,7 @@ function Cart() {
 
                                 </div>
                             </td>
-                            <td><input type="number" value="1"/></td>
+                            <td><input type="number"/></td>
                             <td>$115</td>
                             <td>$115</td>
                         </tr>
@@ -82,6 +82,7 @@ function Cart() {
                             </tr>
                             <div class="cart__btn">
                                 <button className="btn cart__checkout">Checkout</button>
+
                             </div>
                                     
                                 
