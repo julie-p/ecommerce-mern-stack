@@ -41,7 +41,7 @@
     width: 0;
     height: .5px;
     background: #000;
-    transition: width .3s;
+    transition: width .3;
 }
   
 .tools__dropdown li:hover::after {

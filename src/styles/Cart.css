@@ -1,5 +1,5 @@
 .cart__page {
-    /* margin: 80px 80px 20px 80px; */
+    margin: 80px 80px 20px 80px; 
     padding: 1rem;
     color: #594F50;
 }
@@ -85,7 +85,8 @@ td img {
 
 .cart__totalPrice table {
     width: 100%;
-    max-width: 250px;   
+    border-top: 4px solid #594F50;
+    max-width: 200px;   
 }
 
 td:last-child {

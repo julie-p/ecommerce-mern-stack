@@ -11,7 +11,7 @@ function Cart() {
             <Menu />
             <Links />
 
-                <section className="cart__page container">
+                <section className="cart__page">
                     <h1>My Cart</h1>
                     <table>
                         <tr>
