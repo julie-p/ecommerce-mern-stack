@@ -123,3 +123,14 @@ th:last-child {
         clip-path: circle(420px at 90% 10%);
     }
 }
+
+@media screen and (max-width: 565px) {
+    .cart__totalPrice {
+        background-color: transparent;
+    }
+
+    .cart__totalPrice td:first-child {
+        position: absolute;
+        left: 6rem;
+    }
+}
