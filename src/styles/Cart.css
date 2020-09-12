@@ -144,4 +144,8 @@ th:last-child {
         position: absolute;
         left: 6rem;
     }
+
+    .cart__totalPrice table {
+        border: none;
+    }
 }
