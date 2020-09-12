@@ -1,11 +1,15 @@
 import React from 'react';
 import '../styles/Cart.css';
+import data from '../data';
 import Menu from '../Components/Menu';
 import Links from '../Components/Links';
 import Newsletter from '../Components/Newsletter';
 import Footer from '../Components/Footer';
 
-function Cart() {
+function Cart(props) {
+
+    const product = data.products.find(x => x._id === props.match.params.id);
+
     return (
         <div>
             <Menu />
@@ -24,9 +28,9 @@ function Cart() {
                         <tr>
                             <td>
                                 <div className="cart__info">
-                                    <img src="../imgs/shoe-1.png" />
+                                    <img src={product.image} alt={product.name+ "__" + product._id} />
                                     <div>
-                                        <p>Vans Old Skool</p>
+                                        <p>{product.name}</p>
                                         <small>Size : 40</small><br/>
                                         <a href="">Remove</a>
                                     </div>
@@ -34,42 +38,8 @@ function Cart() {
                                 </div>
                             </td>
                             <td><input type="number" value="1"/></td>
-                            <td>$99</td>
-                            <td>$99</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div className="cart__info">
-                                    <img src="../imgs/shoe-6.png" />
-                                    <div>
-                                        <p>Off White x Air Jordan</p>
-                                        <small>Size : 40</small><br/>
-                                        <a href="">Remove</a>
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td><input type="number" value="1"/></td>
-                            <td>$180</td>
-                            <td>$180</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <div className="cart__info">
-                                    <img src="../imgs/shoe-2.png" />
-                                    <div>
-                                        <p>Puma Clyde Core</p>
-                                        <small>Size : 40</small><br/>
-                                        <a href="">Remove</a>
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td><input type="number" value="1"/></td>
-                            <td>$115</td>
-                            <td>$115</td>
+                            <td>${product.price}</td>
+                            <td>${product.price}</td>
                         </tr>
                     </table>
 
@@ -77,7 +47,7 @@ function Cart() {
                         <table>
                             <tr>
                                 <td>Total :</td>
-                                <td>$394.00</td>
+                                <td>$000.00</td>
                             </tr>
                             <div class="cart__btn">
                                 <button className="btn cart__checkout">Checkout</button>

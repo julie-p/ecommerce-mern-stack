@@ -1,6 +1,7 @@
 import React from 'react';
 import "../styles/Cards.css";
 import data from '../data';
+import { Link } from 'react-router-dom';
 
 function Cards() {
 
@@ -22,7 +23,9 @@ function Cards() {
                             <h3>Price :</h3>
                             <span>${product.price}</span>
                         </div>
-                        <button>Buy Now</button>
+                        <Link to={'/cart/' + product._id}>
+                            <button>Buy Now</button>
+                        </Link>
                     </div>
                </div>
     });
