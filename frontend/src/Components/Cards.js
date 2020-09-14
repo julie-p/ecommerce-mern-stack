@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import "../styles/Cards.css";
 import { Link } from 'react-router-dom';
 
@@ -7,18 +6,7 @@ import { connect } from 'react-redux';
 
 function Cards(props) {
 
-    const [ products, setProducts ] = useState([]);
-
-    useEffect(() => {
-        const fetchData = async () => { 
-            const { data } = await axios.get("/api/products");
-            setProducts(data);
-            props.addProducts(data);
-        }
-        fetchData();
-    }, []);
-
-    const shoes = products.map((product, key) => {
+    const shoes = props.products.map((product, key) => {
         return  <div className="cards__card">
                     <div className="cards__imgBx">
                         <img src={product.image} alt={product.name + "__" + product._id + key}/>
@@ -50,15 +38,13 @@ function Cards(props) {
     )
 };
 
-function mapDispatchToProps(dispatch) {
-    return {
-        addProducts: function(products) {
-            dispatch({type: 'addProducts', product: products})
-        }
+function mapStateToProps(state) {
+    return { 
+        products: state.product
     }
 };
 
 export default connect(
-    null, 
-    mapDispatchToProps
+    mapStateToProps, 
+    null
 )(Cards);

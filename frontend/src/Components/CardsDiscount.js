@@ -1,11 +1,10 @@
 import React from 'react';
 import "../styles/Cards.css";
+
 import { connect } from 'react-redux';
 
 function CardsDiscount(props) {
-
-    console.log(props.products);
-
+    
     const discount = props.products.map((product, key) => {
         if (product.discount >= 20) {
             return <div className="cards__card">

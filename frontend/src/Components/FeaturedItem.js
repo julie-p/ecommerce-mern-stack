@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import data from '../data';
 
-function FeaturedItem() {
+import { connect } from 'react-redux';
 
-    const featured = data.products.map((product, key) => {
+function FeaturedItem(props) {
+
+    console.log(props.products);
+    const featured = props.products.map((product, key) => {
         if (product.featured) {
             return <Link to="/shop" className="featured__item">
-                        <img src={product.image} alt={product.name+ "__" + key} className="featured__img" />
+                        <img src={product.image} alt={product.name + "__" + product._id + key} className="featured__img" />
                         <p className="featured__details"><span className="price">${product.price}</span>{product.name}</p>
                    </Link>
         }
@@ -25,4 +27,13 @@ function FeaturedItem() {
     )
 };
 
-export default FeaturedItem;
+function mapStateToProps(state) {
+    return { 
+        products: state.product
+    }
+};
+
+export default connect(
+    mapStateToProps, 
+    null
+)(FeaturedItem);
