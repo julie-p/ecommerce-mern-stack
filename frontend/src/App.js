@@ -19,7 +19,7 @@ function App() {
           <Route path='/' exact component={Homepage}/>
           <Route path='/shop' component={Shop} />
           <Route path='/sales' component={Outlet} />
-          <Route path='/cart/:id' component={Cart} />
+          <Route path='/cart' component={Cart} />
         </Switch>
       </Router>
     </Provider>

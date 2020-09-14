@@ -24,7 +24,7 @@ function Cards(props) {
                             <h3>Price :</h3>
                             <span>${product.price}</span>
                         </div>
-                        <Link to={'/cart/' + product._id}>
+                        <Link>
                             <button>Buy Now</button>
                         </Link>
                     </div>

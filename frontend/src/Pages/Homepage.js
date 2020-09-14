@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
 import Menu from '../Components/Menu';
 import Header from '../Components/Header';
@@ -12,12 +12,9 @@ import { connect } from 'react-redux';
 
 function Homepage(props) {
 
-    const [ products, setProducts ] = useState([]);
-
     useEffect(() => {
         const fetchData = async () => { 
             const { data } = await axios.get("/api/products");
-            setProducts(data);
             props.addProducts(data);
         }
         fetchData();
