@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import "../styles/Cards.css";
-import data from '../data';
 import { Link } from 'react-router-dom';
 
-function Cards() {
+import { connect } from 'react-redux';
 
-    const shoes = data.products.map((product, key) => {
-        return <div className="cards__card">
+function Cards(props) {
+
+    const [ products, setProducts ] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => { 
+            const { data } = await axios.get("/api/products");
+            setProducts(data);
+            props.addProducts(data);
+        }
+        fetchData();
+    }, []);
+
+    const shoes = products.map((product, key) => {
+        return  <div className="cards__card">
                     <div className="cards__imgBx">
-                        <img src={product.image} alt={product.name+ "__" + key}/>
+                        <img src={product.image} alt={product.name + "__" + product._id + key}/>
                     </div>
                     <div className="cards__contentBx">
                         <h2>{product.name}</h2>
@@ -27,7 +40,7 @@ function Cards() {
                             <button>Buy Now</button>
                         </Link>
                     </div>
-               </div>
+                </div>
     });
 
     return (
@@ -37,4 +50,15 @@ function Cards() {
     )
 };
 
-export default Cards;
+function mapDispatchToProps(dispatch) {
+    return {
+        addProducts: function(products) {
+            dispatch({type: 'addProducts', product: products})
+        }
+    }
+};
+
+export default connect(
+    null, 
+    mapDispatchToProps
+)(Cards);

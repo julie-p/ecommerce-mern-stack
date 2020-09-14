@@ -1,10 +1,12 @@
 import React from 'react';
 import "../styles/Cards.css";
-import data from '../data';
+import { connect } from 'react-redux';
 
-function CardsDiscount() {
+function CardsDiscount(props) {
 
-    const discount = data.products.map((product, key) => {
+    console.log(props.products);
+
+    const discount = props.products.map((product, key) => {
         if (product.discount >= 20) {
             return <div className="cards__card">
                         <div className="cards__imgBx">
@@ -38,4 +40,13 @@ function CardsDiscount() {
     )
 };
 
-export default CardsDiscount;
+function mapStateToProps(state) {
+    return { 
+        products: state.product
+    }
+};
+
+export default connect(
+    mapStateToProps, 
+    null
+)(CardsDiscount);

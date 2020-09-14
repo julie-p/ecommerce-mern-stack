@@ -6,16 +6,23 @@ import Shop from './Pages/Shop';
 import Outlet from './Pages/Outlet';
 import Cart from './Pages/Cart';
 
+import product from './reducer/product.reducer';
+import { Provider } from 'react-redux';
+import { createStore, combineReducers } from 'redux';
+const store = createStore(combineReducers({product}));
+
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path='/' exact component={Homepage}/>
-        <Route path='/shop' component={Shop} />
-        <Route path='/sales' component={Outlet} />
-        <Route path='/cart/:id' component={Cart} />
-      </Switch>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <Switch>
+          <Route path='/' exact component={Homepage}/>
+          <Route path='/shop' component={Shop} />
+          <Route path='/sales' component={Outlet} />
+          <Route path='/cart/:id' component={Cart} />
+        </Switch>
+      </Router>
+    </Provider>
   )
 };
 
