@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import { connect } from 'react-redux';
+function FeaturedItem() {
 
-function FeaturedItem(props) {
+    const [ products, setProducts ] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => { 
             const { data } = await axios.get("/api/products");
-            props.addProducts(data);
+            setProducts(data);
         }
         fetchData();
     }, []);
 
-    const featured = props.products.map((product, key) => {
+    const featured = products.map((product, key) => {
         if (product.featured) {
             return  <Link to="/shop" className="featured__item">
                         <img src={product.image} alt={product.name + "__" + product._id + key} className="featured__img" />
@@ -35,21 +35,4 @@ function FeaturedItem(props) {
     )
 };
 
-function mapStateToProps(state) {
-    return { 
-        products: state.product
-    }
-};
-
-function mapDispatchToProps(dispatch) {
-    return {
-        addProducts: function(products) {
-            dispatch({type: 'addProducts', product: products})
-        }
-    }
-};
-
-export default connect(
-    mapStateToProps, 
-    mapDispatchToProps
-)(FeaturedItem);
+export default FeaturedItem;

@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import data from '../data';
 
-import { connect } from 'react-redux';
 
-function ProductsHome(props) {
+function ProductsHome() {
 
-    const products = props.products.map((product, key) => {
+    const products = data.products.map((product, key) => {
         if (!product.featured && product.name === 'Vans Old Skool') {
             return <article className="product shoe-red spacing">
                         <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
@@ -41,13 +40,4 @@ function ProductsHome(props) {
     )
 };
 
-function mapStateToProps(state) {
-    return { 
-        products: state.product
-    }
-};
-
-export default connect(
-    mapStateToProps, 
-    null
-)(ProductsHome);
+export default ProductsHome;
