@@ -1,35 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { listProducts } from '../actions/productActions';
 
 function FeaturedItem() {
 
-    const [ products, setProducts ] = useState([]);
+    const productList = useSelector(state => state.productList);
+    const { products, loading, error } = productList;
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        const fetchData = async () => { 
-            const { data } = await axios.get("/api/products");
-            setProducts(data);
+        dispatch(listProducts());
+
+        return () => {
+
         }
-        fetchData();
+        
     }, []);
 
-    const featured = products.map((product, key) => {
-        if (product.featured) {
-            return  <Link to="/shop" className="featured__item">
-                        <img src={product.image} alt={product.name + "__" + product._id + key} className="featured__img" />
-                        <p className="featured__details"><span className="price">${product.price}</span>{product.name}</p>
-                    </Link>
-        }
-    });
-
-    return (
+    return ( 
+        loading ? 
+        <div>Loading...</div> 
+        : 
+        error ? 
+        <div>{error}</div> 
+        :
         <section className="featured">
             <div className="container">
                 <h2 className="section-title">Featured Products</h2>
             </div>  
             <div className="split">
-                {featured}
+                {products.map((product, key) => {
+                    if (product.featured) {
+                        return  <Link to="/shop" className="featured__item">
+                                    <img src={product.image} alt={product.name + "__" + product._id + key} className="featured__img" />
+                                    <p className="featured__details"><span className="price">${product.price}</span>{product.name}</p>
+                                </Link>
+                    }
+                })}
             </div>
         </section> 
     )
