@@ -10,12 +10,7 @@ function FeaturedItem() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(listProducts());
-
-        return () => {
-
-        }
-        
+        dispatch(listProducts());      
     }, []);
 
     return ( 
