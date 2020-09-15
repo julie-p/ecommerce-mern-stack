@@ -1,12 +1,13 @@
 import React from 'react';
 import "../styles/Cards.css";
+import data from "../data";
 import { Link } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 
 function Cards(props) {
 
-    const shoes = props.products.map((product, key) => {
+    const shoes = data.products.map((product, key) => {
         return  <div className="cards__card">
                     <div className="cards__imgBx">
                         <img src={product.image} alt={product.name + "__" + product._id + key}/>
@@ -38,13 +39,4 @@ function Cards(props) {
     )
 };
 
-function mapStateToProps(state) {
-    return { 
-        products: state.product
-    }
-};
-
-export default connect(
-    mapStateToProps, 
-    null
-)(Cards);
+export default Cards;

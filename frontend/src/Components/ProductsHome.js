@@ -6,8 +6,6 @@ import { connect } from 'react-redux';
 
 function ProductsHome(props) {
 
-    console.log(props.product)
-
     const products = props.products.map((product, key) => {
         if (!product.featured && product.name === 'Vans Old Skool') {
             return <article className="product shoe-red spacing">

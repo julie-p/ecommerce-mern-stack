@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import Menu from '../Components/Menu';
 import Header from '../Components/Header';
 import FeaturedItem from '../Components/FeaturedItem';
@@ -8,17 +7,7 @@ import Newsletter from '../Components/Newsletter';
 import Footer from '../Components/Footer';
 import '../styles/Homepage.css';
 
-import { connect } from 'react-redux';
-
-function Homepage(props) {
-
-    useEffect(() => {
-        const fetchData = async () => { 
-            const { data } = await axios.get("/api/products");
-            props.addProducts(data);
-        }
-        fetchData();
-    }, []);
+function Homepage() {
 
     return (
         <div>
@@ -39,15 +28,4 @@ function Homepage(props) {
     )
 };
 
-function mapDispatchToProps(dispatch) {
-    return {
-        addProducts: function(products) {
-            dispatch({type: 'addProducts', product: products})
-        }
-    }
-};
-
-export default connect(
-    null, 
-    mapDispatchToProps
-)(Homepage);
+export default Homepage;
