@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../styles/Cards.css";
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 
 
 function CardsDiscount() {
 
+    const [ size, setSize ] = useState(37);
     const productList = useSelector(state => state.productList);
     const { products, loading, error } = productList;
     const dispatch = useDispatch();
@@ -34,16 +36,20 @@ function CardsDiscount() {
                                         <h2>{product.name}</h2>
                                         <div className="cards__size">
                                             <h3>Size :</h3>
-                                            <span>38</span>
-                                            <span>39</span>
-                                            <span>40</span>
-                                            <span>42</span>
+                                            <select onChange={(e) => { setSize(e.target.value) }}>
+                                                <option>Select your size</option>
+                                                {product.sizes.map(x => 
+                                                    <option key={x} value={x}>{x} EU/FR</option>
+                                                )}
+                                            </select>
                                         </div>
                                         <div className="cards__price">
                                             <h3>Price :</h3>
                                             <span>${product.price}</span>
                                         </div>
-                                        <button href="#">Buy Now</button>
+                                        <Link to={'/cart/' + product._id + "?size=" + size}>
+                                            <button>Buy Now</button>
+                                        </Link>
                                     </div>
                                </div>
                     }

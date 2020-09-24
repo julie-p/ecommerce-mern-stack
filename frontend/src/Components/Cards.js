@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../styles/Cards.css";
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -6,6 +6,7 @@ import { listProducts } from '../actions/productActions';
 
 function Cards() {
 
+    const [ size, setSize ] = useState(37);
     const productList = useSelector(state => state.productList);
     const { products, loading, error } = productList;
     const dispatch = useDispatch();
@@ -32,16 +33,17 @@ function Cards() {
                                     <h2>{product.name}</h2>
                                     <div className="cards__size">
                                         <h3>Size :</h3>
-                                        <span>38</span>
-                                        <span>39</span>
-                                        <span>40</span>
-                                        <span>42</span>
+                                        <select value={size} onChange={(e) => { setSize(e.target.value) }}>
+                                            {product.sizes.map(x => 
+                                                <option key={x} value={x}>{x} EU/FR</option>
+                                            )}
+                                        </select>
                                     </div>
                                     <div className="cards__price">
                                         <h3>Price :</h3>
                                         <span>${product.price}</span>
                                     </div>
-                                    <Link>
+                                    <Link to={'/cart/' + product._id + "?size=" + size}>
                                         <button>Buy Now</button>
                                     </Link>
                                 </div>

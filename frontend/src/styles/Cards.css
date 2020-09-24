@@ -93,7 +93,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 4px;
     padding: 8px 20px;
     transition: 0.5s;
     opacity: 0;
@@ -160,4 +160,24 @@
     transform: translateY(0px);
     transition-delay:  0.75s;
 }
+
+.cards__size select {
+    /* background: #2bb9dd52; */
+    background: transparent;
+    /* color: #fff; */
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
+}
+
+.cards__size select:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+
+.cards__size select option {
+    background-color: #ebedef;
+}
+
 

@@ -5,7 +5,13 @@ import Links from '../Components/Links';
 import Newsletter from '../Components/Newsletter';
 import Footer from '../Components/Footer';
 
-function Cart() {
+function Cart(props) {
+
+    const productId = props.match.params.id;
+    const size = props.location.search? Number(props.location.search.split("=")[1]) : 1;
+
+    console.log(productId, size);
+
     return (
         <div>
             <Menu />
