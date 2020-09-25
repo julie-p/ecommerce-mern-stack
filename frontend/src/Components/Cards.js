@@ -32,7 +32,7 @@ function Cards() {
                                     <h2>{product.name}</h2>
                                     <div className="cards__size">
                                         {product.stock <= 0 ?
-                                            <h3>Out of stock</h3>
+                                            <h3 className="cards__stock">Out of stock</h3>
                                             :
                                             <h3>In stock</h3>
                                         }

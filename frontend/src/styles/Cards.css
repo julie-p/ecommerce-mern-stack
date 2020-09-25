@@ -161,6 +161,10 @@
     transition-delay:  0.75s;
 }
 
+.cards__stock {
+    color: red;
+}
+
 .cards__size select {
     /* background: #2bb9dd52; */
     background: transparent;
