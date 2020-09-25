@@ -5,8 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 
 function Cards() {
-
-    const [ size, setSize ] = useState(37);
+    
     const productList = useSelector(state => state.productList);
     const { products, loading, error } = productList;
     const dispatch = useDispatch();
@@ -32,19 +31,28 @@ function Cards() {
                                 <div className="cards__contentBx">
                                     <h2>{product.name}</h2>
                                     <div className="cards__size">
-                                        <h3>Size :</h3>
-                                        <select value={size} onChange={(e) => { setSize(e.target.value) }}>
-                                            {product.sizes.map(x => 
-                                                <option key={x} value={x}>{x} EU/FR</option>
-                                            )}
-                                        </select>
+                                        {product.stock <= 0 ?
+                                            <h3>Out of stock</h3>
+                                            :
+                                            <h3>In stock</h3>
+                                        }
+                                            {/* <h3>Size :</h3>
+                                            <select onChange={(e) => { setSize(e.target.value) }}>
+                                                <option>Select your size</option>
+                                                {product.sizes.map(x => 
+                                                    <option key={x} value={x}>{x} EU/FR</option>
+                                                )}
+                                            </select> */}
                                     </div>
                                     <div className="cards__price">
                                         <h3>Price :</h3>
                                         <span>${product.price}</span>
                                     </div>
-                                    <Link to={'/cart/' + product._id + "?size=" + size}>
+                                    {/* <Link to={'/cart/' + product._id + "?size=" + size + "?qty=" + qty}>
                                         <button>Buy Now</button>
+                                    </Link> */}
+                                    <Link to={'/product-details/' + product._id}>
+                                        <button>See Now</button>
                                     </Link>
                                 </div>
                             </div>

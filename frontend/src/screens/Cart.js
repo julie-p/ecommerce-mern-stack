@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { addToCart } from '../actions/cartActions';
+import { useSelector, useDispatch } from 'react-redux';
 import '../styles/Cart.css';
 import Menu from '../Components/Menu';
 import Links from '../Components/Links';
@@ -7,16 +9,27 @@ import Footer from '../Components/Footer';
 
 function Cart(props) {
 
+    const cart = useSelector(state => state.cart);
+    const { cartItems } = cart;
+
     const productId = props.match.params.id;
     const size = props.location.search? Number(props.location.search.split("=")[1]) : 1;
+    const dispatch = useDispatch();
 
     console.log(productId, size);
+
+    useEffect(() => {
+        if (productId) {
+            dispatch(addToCart(productId, size))
+        }
+    }, []);
 
     return (
         <div>
             <Menu />
             <Links />
 
+        
             <section className="cart__page">
                 <h1>My Cart</h1>
                 <table>
@@ -27,21 +40,31 @@ function Cart(props) {
                         <th>Total</th>
                     </tr>
 
-                    <tr>
-                        <td>
-                            <div className="cart__info">
-                                <img src="../imgs/shoe-2.png" alt='' />
-                                <div>
-                                    <p>Puma Clyde Core</p>
-                                    <small>Size : 40</small><br/>
-                                    <a href="">Remove</a>
-                                </div>
 
-                            </div>
-                        </td>
-                        <td><input type="number" value="1"/></td>
-                        <td>$115</td>
-                        <td>$115</td>
+                    <tr>
+                    { 
+                        cartItems.length === 0 ?
+                        <div>Your cart is empty</div>
+                        :
+                        cartItems.map(item => 
+                        <div>
+                            <td>
+                                <div className="cart__info">
+                                    <img src={item.image} alt='product' />
+                                    <div>
+                                        <p>{item.name}</p>
+                                        <small>Size : {item.size}</small><br/>
+                                        <a href="">Remove</a>
+                                    </div>
+
+                                </div>
+                            </td>
+                            <td><input type="number" value=""/></td>
+                            <td>{item.price}</td>
+                            <td>{item.price}</td>
+                        </div>
+                        )
+                    }
                     </tr>
                 </table>
 
@@ -60,7 +83,7 @@ function Cart(props) {
                     </table>
                 </div>
             </section>
-
+            
             <section>
                 <Newsletter />
             </section>

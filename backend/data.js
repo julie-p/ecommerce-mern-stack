@@ -8,7 +8,8 @@ export default {
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-1.png',
             featured: false,
-            discount: 0
+            discount: 0,
+            stock: 42
         },
         {
             _id: '2',
@@ -18,7 +19,8 @@ export default {
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-2.png',
             featured: false,
-            discount: 0
+            discount: 0,
+            stock: 26
         },
         {
             _id: '3',
@@ -28,7 +30,8 @@ export default {
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-3.png',
             featured: false,
-            discount: 0
+            discount: 0,
+            stock: 0
         },
         {
             _id: '4',
@@ -38,7 +41,8 @@ export default {
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-4.png',
             featured: true,
-            discount: 20
+            discount: 20,
+            stock: 8
         },
         {
             _id: '5',
@@ -48,17 +52,19 @@ export default {
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-5.png',
             featured: true,
-            discount: 20
+            discount: 20,
+            stock: 31
         },
         {
-            _id: '5',
+            _id: '6',
             name: 'Off-White x Air Jordan', 
             sizes: [38, 39, 40],
             price: 180,
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium quidem enim sit sequi!', 
             image: '../imgs/shoe-6.png',
             featured: true,
-            discount: 20
+            discount: 20,
+            stock: 22
         },
     ]
 };
