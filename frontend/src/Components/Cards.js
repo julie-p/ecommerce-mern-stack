@@ -30,11 +30,30 @@ function Cards() {
                                 </div>
                                 <div className="cards__contentBx">
                                     <h2>{product.name}</h2>
-                                    <div className="cards__size">
+                                    <div className="cards__info">
                                         {product.stock <= 0 ?
-                                            <h3 className="cards__stock">Out of stock</h3>
+                                            <div>
+                                                <div className="cards__price">
+                                                    <h3>Price :</h3>
+                                                    <span>${product.price}</span>
+                                                </div>
+               
+                                                <Link to={'/product-details/' + product._id}>
+                                                    <button disabled>Out of stock</button>
+                                                </Link>
+                                            </div>
                                             :
-                                            <h3>In stock</h3>
+                                            <div>
+                                                <h3>In stock</h3>
+                                                <div className="cards__price">
+                                                    <h3>Price :</h3>
+                                                    <span>${product.price}</span>
+                                                </div>
+               
+                                                <Link to={'/product-details/' + product._id}>
+                                                    <button>See Now</button>
+                                                </Link>
+                                            </div>
                                         }
                                             {/* <h3>Size :</h3>
                                             <select onChange={(e) => { setSize(e.target.value) }}>
@@ -44,16 +63,7 @@ function Cards() {
                                                 )}
                                             </select> */}
                                     </div>
-                                    <div className="cards__price">
-                                        <h3>Price :</h3>
-                                        <span>${product.price}</span>
-                                    </div>
-                                    {/* <Link to={'/cart/' + product._id + "?size=" + size + "?qty=" + qty}>
-                                        <button>Buy Now</button>
-                                    </Link> */}
-                                    <Link to={'/product-details/' + product._id}>
-                                        <button>See Now</button>
-                                    </Link>
+                                    
                                 </div>
                             </div>
                 })

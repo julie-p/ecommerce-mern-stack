@@ -49,12 +49,12 @@ function ProductDetails(props) {
                             )}
                         </select> */}
                         <h3>Quantity :</h3>
-                        {/* <select onChange={(e) => { setQty(e.target.value) }}>
+                        <select value={qty} onChange={(e) => { setQty(e.target.value) }}>
                             <option>Select quantity</option>
-                            {product.sizes.map(x => 
-                                <option key={x} value={x + 1}>{x + 1} </option>
+                            {[...Array(product.stock).keys()].map(x =>
+                                <option value={x+1}>{x + 1}</option>
                             )}
-                        </select> */}
+                        </select>
                         <Link>
                             <button>Buy Now</button>
                         </Link>

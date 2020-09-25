@@ -88,7 +88,7 @@
     color: #222;
 }   
 
-.cards__container .cards__card .cards__contentBx .cards__size,
+.cards__container .cards__card .cards__contentBx .cards__info,
 .cards__container .cards__card .cards__contentBx .cards__price {
     display: flex;
     justify-content: center;
@@ -100,7 +100,7 @@
     visibility: hidden;
 }
 
-.cards__container .cards__card:hover .cards__contentBx .cards__size {
+.cards__container .cards__card:hover .cards__contentBx .cards__info {
     opacity: 1;
     visibility: visible;
     transition-delay: 0.5s;
@@ -112,7 +112,7 @@
     transition-delay: 0.6s;
 }
 
-.cards__container .cards__card .cards__contentBx .cards__size h3,
+.cards__container .cards__card .cards__contentBx .cards__info h3,
 .cards__container .cards__card .cards__contentBx .cards__price h3 {
     font-weight: 300;
     font-size: 14px;
@@ -121,7 +121,7 @@
     margin-right: 10px;
 }
 
-.cards__container .cards__card .cards__contentBx .cards__size span {
+.cards__container .cards__card .cards__contentBx .cards__info span {
     width: 26px;
     height: 26px;
     border-radius: 3px;
@@ -130,15 +130,8 @@
     font-size: 14px;
     display: inline-block;
     color: #111;
-    background: #eee;
     margin: 0 5px;
     transition: 0.5s;
-    cursor: pointer;
-}
-
-.cards__container .cards__card .cards__contentBx .cards__size span:hover {
-    background: #fcb322;
-    color: #eee;
 }
 
 .cards__container .cards__card .cards__contentBx button {
@@ -153,35 +146,22 @@
     font-size: 1.125rem;
     padding: .5em 1.25em;
     cursor: pointer;
+    visibility: hidden;
+}
+
+.cards__container .cards__card .cards__contentBx button:disabled {
+    background: red;
 }
 
 .cards__container .cards__card:hover .cards__contentBx button {
     opacity: 1;
     transform: translateY(0px);
     transition-delay:  0.75s;
+    visibility: visible;
 }
 
 .cards__stock {
     color: red;
-}
-
-.cards__size select {
-    /* background: #2bb9dd52; */
-    background: transparent;
-    /* color: #fff; */
-    border: none;
-    outline: none;
-    width: 150px;
-    height: 40px;
-    font-size: 14px;
-}
-
-.cards__size select:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-}
-
-.cards__size select option {
-    background-color: #ebedef;
 }
 
 
