@@ -27,7 +27,7 @@ function FeaturedItem() {
             <div className="split">
                 {products.map((product, key) => {
                     if (product.featured) {
-                        return  <Link to="/shop" className="featured__item">
+                        return  <Link to={"/product-details/" + product._id} className="featured__item">
                                     <img src={product.image} alt={product.name + "__" + product._id + key} className="featured__img" />
                                     <p className="featured__details"><span className="price">${product.price}</span>{product.name}</p>
                                 </Link>
