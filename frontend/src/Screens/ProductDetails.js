@@ -39,7 +39,7 @@ function ProductDetails(props) {
                     (
                     <div>
                         <h1>{product.name}</h1>
-                        <img src={product.image}/>
+                        <img src={product.image} alt=""/>
                         <p>{product.description}</p>
                         <h3>Size :</h3>
                         {/* <select onChange={(e) => { setSize(e.target.value) }}>

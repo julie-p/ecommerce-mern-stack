@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import "../styles/Cards.css";
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -23,7 +23,7 @@ function Cards() {
         :
         <section className="cards__container">
             {
-                products.map((product, key) => {
+                Array.from(products).map((product, key) => {
                     return  <div className="cards__card">
                                 <div className="cards__imgBx">
                                     <img src={product.image} alt={product.name + "__" + product._id + key}/>

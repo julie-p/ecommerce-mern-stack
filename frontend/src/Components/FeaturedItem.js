@@ -5,7 +5,7 @@ import { listProducts } from '../actions/productActions';
 
 function FeaturedItem() {
 
-    const productList = useSelector(state => state.productList);
+    const productList = useSelector((state) => state.productList);
     const { products, loading, error } = productList;
     const dispatch = useDispatch();
 
@@ -25,7 +25,7 @@ function FeaturedItem() {
                 <h2 className="section-title">Featured Products</h2>
             </div>  
             <div className="split">
-                {products.map((product, key) => {
+                {Array.from(products).map((product, key) => {
                     if (product.featured) {
                         return  <Link to={"/product-details/" + product._id} className="featured__item">
                                     <img src={product.image} alt={product.name + "__" + product._id + key} className="featured__img" />

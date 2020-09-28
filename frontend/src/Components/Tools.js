@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import data from '../data';
+import React, { useState } from 'react';
 import '../styles/Tools.css';
 import { useLocation } from 'react-router-dom';
 

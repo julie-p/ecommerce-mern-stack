@@ -26,37 +26,50 @@ function CardsDiscount() {
         <div>
             <div className="cards__container">
             {
-                products.map((product, key) => {
+                Array.from(products).map((product, key) => {
                     if (product.discount >= 20) {
-                        return <div className="cards__card">
+                        return  <div className="cards__card">
                                     <div className="cards__imgBx">
-                                        <img src={product.image} alt={product.name+ "__" + key}/>
+                                        <img src={product.image} alt={product.name + "__" + product._id + key}/>
                                     </div>
                                     <div className="cards__contentBx">
                                         <h2>{product.name}</h2>
-                                        <div className="cards__size">
+                                        <div className="cards__info">
                                             {product.stock <= 0 ?
-                                                <h3>Out of stock</h3>
+                                                <div>
+                                                    <div className="cards__price">
+                                                        <h3>Price :</h3>
+                                                        <span>${product.price}</span>
+                                                    </div>
+                
+                                                    <Link to={'/product-details/' + product._id}>
+                                                        <button disabled>Out of stock</button>
+                                                    </Link>
+                                                </div>
                                                 :
-                                                <h3>In stock</h3>
+                                                <div>
+                                                    <h3>In stock</h3>
+                                                    <div className="cards__price">
+                                                        <h3>Price :</h3>
+                                                        <span>${product.price}</span>
+                                                    </div>
+                
+                                                    <Link to={'/product-details/' + product._id}>
+                                                        <button>See Now</button>
+                                                    </Link>
+                                                </div>
                                             }
-                                            {/* <h3>Size :</h3>
-                                            <select onChange={(e) => { setSize(e.target.value) }}>
-                                                <option>Select your size</option>
-                                                {product.sizes.map(x => 
-                                                    <option key={x} value={x}>{x} EU/FR</option>
-                                                )}
-                                            </select> */}
+                                                {/* <h3>Size :</h3>
+                                                <select onChange={(e) => { setSize(e.target.value) }}>
+                                                    <option>Select your size</option>
+                                                    {product.sizes.map(x => 
+                                                        <option key={x} value={x}>{x} EU/FR</option>
+                                                    )}
+                                                </select> */}
                                         </div>
-                                        <div className="cards__price">
-                                            <h3>Price :</h3>
-                                            <span>${product.price}</span>
-                                        </div>
-                                        <Link to={'/product-details/' + product._id}>
-                                            <button>See Now</button>
-                                        </Link>
+                                        
                                     </div>
-                               </div>
+                                </div>
                     }
                 })
             }

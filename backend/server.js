@@ -4,7 +4,8 @@ import data from './data';
 const app = express();
 
 app.get("/api/products", (req, res) => {
-    res.send(data.products);
+    const products = data.products;
+    res.send(products);
 });
 
 app.get("/api/products/:id", (req, res) => {

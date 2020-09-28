@@ -5,7 +5,7 @@ import { listProducts } from '../actions/productActions';
 
 function ProductsHome() {
 
-    const productList = useSelector(state => state.productList);
+    const productList = useSelector((state) => state.productList);
     const { products, loading, error } = productList;
     const dispatch = useDispatch();
 
@@ -23,7 +23,7 @@ function ProductsHome() {
         <section className="products">
             <div className="container">
                 <h2 className="section-title">Our products</h2>
-                {products.map((product, key) => {
+                {Array.from(products).map((product, key) => {
                     if (!product.featured && product.name === 'Vans Old Skool') {
                         return  <article className="product shoe-red spacing">
                                     <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
