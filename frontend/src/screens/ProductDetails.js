@@ -50,7 +50,6 @@ function ProductDetails(props) {
                         </select> */}
                         <h3>Quantity :</h3>
                         <select value={qty} onChange={(e) => { setQty(e.target.value) }}>
-                            <option>Select quantity</option>
                             {[...Array(product.stock).keys()].map(x =>
                                 <option value={x+1}>{x + 1}</option>
                             )}
