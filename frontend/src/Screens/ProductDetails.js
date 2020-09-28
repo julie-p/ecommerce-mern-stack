@@ -41,10 +41,11 @@ function ProductDetails(props) {
                         <h1>{product.name}</h1>
                         <img src={product.image} alt=""/>
                         <p>{product.description}</p>
+                        <span>${product.price}</span>
                         <h3>Size :</h3>
                         {/* <select onChange={(e) => { setSize(e.target.value) }}>
                             <option>Select your size</option>
-                            {product.sizes.map(x => 
+                            {[...Array(product.sizes).keys()].map(x => 
                                 <option key={x} value={x}>{x} EU/FR</option>
                             )}
                         </select> */}

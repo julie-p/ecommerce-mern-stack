@@ -31,57 +31,60 @@ function Cart(props) {
 
         
             <section className="cart__page">
-                <h1>My Cart</h1>
-                <table>
-                    <tr>
-                        <th>Product</th>
-                        <th>Qty</th>
-                        <th>Price</th>
-                        <th>Total</th>
-                    </tr>
-
-
-                    <tr>
-                    { 
-                        cartItems.length === 0 ?
-                        <div>Your cart is empty</div>
-                        :
-                        cartItems.map(item => 
-                        <div>
-                            <td>
-                                <div className="cart__info">
-                                    <img src={item.image} alt='product' />
-                                    <div>
-                                        <p>{item.name}</p>
-                                        <small>Size : {item.size}</small><br/>
-                                        <a href="">Remove</a>
-                                    </div>
-
-                                </div>
-                            </td>
-                            <td><input type="number" value=""/></td>
-                            <td>{item.price}</td>
-                            <td>{item.price}</td>
-                        </div>
-                        )
-                    }
-                    </tr>
-                </table>
-
-                <div class="cart__totalPrice">
+                {
+                cartItems.length === 0 ?
+                <h1>Your cart is empty</h1>
+                :
+                cartItems.map(item => 
+                <div>
+                    <h1>My Cart</h1>
                     <table>
                         <tr>
-                            <td>Total :</td>
-                            <td>$115.00</td>
+                            <th>Product</th>
+                            <th>Qty</th>
+                            <th>Price</th>
+                            <th>Total</th>
                         </tr>
-                        <div class="cart__btn">
-                            <button className="btn cart__checkout">Checkout</button>
 
-                        </div>
-                                
-                            
+
+                        <tr>
+                            <div>
+                                <td>
+                                    <div className="cart__info">
+                                        <img src={item.image} alt='product' />
+                                        <div>
+                                            <p>{item.name}</p>
+                                            <small>Size : {item.size}</small><br/>
+                                            <a href="">Remove</a>
+                                        </div>
+
+                                    </div>
+                                </td>
+                                <td><input type="number" value=""/></td>
+                                <td>{item.price}</td>
+                                <td>{item.price}</td>
+                            </div>
+                        
+                        </tr>
                     </table>
+
+                    <div class="cart__totalPrice">
+                        <table>
+                            <tr>
+                                <td>Total :</td>
+                                <td>$115.00</td>
+                            </tr>
+                            <div class="cart__btn">
+                                <button className="btn cart__checkout">Checkout</button>
+
+                            </div>
+                                    
+                                
+                        </table>
+                    </div>
                 </div>
+                )
+            }
             </section>
             
             <section>
