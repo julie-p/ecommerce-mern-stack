@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Homepage from './Pages/Homepage';
-import Shop from './Pages/Shop';
-import Outlet from './Pages/Outlet';
-import ProductDetails from './Pages/ProductDetails';
-import Cart from './Pages/Cart';
+import Homepage from './Screens/Homepage';
+import Shop from './Screens/Shop';
+import Outlet from './Screens/Outlet';
+import ProductDetails from './Screens/ProductDetails';
+import Cart from './Screens/Cart';
 
 function App() {
   return (
