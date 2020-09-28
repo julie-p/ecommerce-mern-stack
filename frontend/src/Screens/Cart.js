@@ -16,8 +16,6 @@ function Cart(props) {
     const size = props.location.search? Number(props.location.search.split("=")[1]) : 1;
     const dispatch = useDispatch();
 
-    console.log(productId, size);
-
     useEffect(() => {
         if (productId) {
             dispatch(addToCart(productId, size))

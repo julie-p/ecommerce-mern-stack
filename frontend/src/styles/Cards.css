@@ -151,6 +151,7 @@
 
 .cards__container .cards__card .cards__contentBx button:disabled {
     background: red;
+    cursor: default;
 }
 
 .cards__container .cards__card:hover .cards__contentBx button {
