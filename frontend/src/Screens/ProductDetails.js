@@ -59,7 +59,12 @@ function ProductDetails(props) {
                                 <option value={x+1}>{x + 1}</option>
                             )}
                         </select>
+                        {product.stock <= 0 ? 
+                        <button disabled>Out Of Stock</button>
+                        :
                         <button onClick={handleAddToCart}>Buy Now</button>
+                        }
+                        
                     </div>
                     )
                 }
