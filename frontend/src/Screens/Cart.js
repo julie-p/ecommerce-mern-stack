@@ -44,11 +44,11 @@ function Cart(props) {
                             </tr>
 
                             {
-                            cartItems.map(item => (
+                            cartItems.map((item, key) => (
                             <tr>
                                 <td>
                                     <div className="cart__info">
-                                        <img src={item.image} alt='' />
+                                        <img src={item.image} alt={item.name + "__" + item.product + "__" + key} />
                                         <div>
                                             <p>{item.name}</p>
                                             {/* <small>Size : 40</small><br/> */}
@@ -58,7 +58,13 @@ function Cart(props) {
                                     </div>
                                 </td>
                                 <td>${item.price}</td>
-                                <td><input type="number" value={item.qty}/></td>
+                                <td>
+                                    <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}>
+                                    {[...Array(item.stock).keys()].map(x =>
+                                        <option key={x + 1} value={x + 1}>{x + 1}</option>
+                                    )}
+                                    </select>
+                                </td>
                                 <td>${item.price * item.qty}</td>
                             </tr>   
                             ))}
@@ -68,7 +74,7 @@ function Cart(props) {
                         <div class="cart__totalPrice">
                             <table>
                                 <tr>
-                            <td><b>Total</b> ({cartItems.reduce((a, c) => a + c.qty, 0)} products) :</td>
+                            <td><b>Total</b> :</td>
                                     <td>${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</td>
                                 </tr>
                                 <div class="cart__btn">
