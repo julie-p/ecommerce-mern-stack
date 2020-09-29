@@ -38,8 +38,8 @@ function Cart(props) {
                         <table>
                             <tr>
                                 <th>Product</th>
-                                <th>Qty</th>
                                 <th>Price</th>
+                                <th>Qty</th>
                                 <th>Total</th>
                             </tr>
 
@@ -57,8 +57,8 @@ function Cart(props) {
 
                                     </div>
                                 </td>
-                                <td><input type="number" value={item.qty}/></td>
                                 <td>${item.price}</td>
+                                <td><input type="number" value={item.qty}/></td>
                                 <td>${item.price * item.qty}</td>
                             </tr>   
                             ))}
