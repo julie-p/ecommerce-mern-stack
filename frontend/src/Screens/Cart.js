@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeFromCart } from '../actions/cartActions';
 import { useSelector, useDispatch } from 'react-redux';
 import '../styles/Cart.css';
 import Menu from '../Components/Menu';
@@ -22,6 +22,10 @@ function Cart(props) {
         }
     }, []);
 
+    const removeFromCartHandler = (productId) => {
+        dispatch(removeFromCart(productId));
+    };
+
     return (
         <div>
             <Menu />
@@ -31,7 +35,7 @@ function Cart(props) {
             <section className="cart__page">
                 {
                 cartItems.length === 0 ?
-                <h1>Your cart is empty</h1>
+                <h1 className="cart__empty">Your cart is empty</h1>
                 :
                 <div>
                     <h1>My Cart</h1>
@@ -52,7 +56,7 @@ function Cart(props) {
                                         <div>
                                             <p>{item.name}</p>
                                             {/* <small>Size : 40</small><br/> */}
-                                            <a href="">Remove</a>
+                                            <span onClick={() => removeFromCartHandler(item.product)}>Remove</span>
                                         </div>
 
                                     </div>

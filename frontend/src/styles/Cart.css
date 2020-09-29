@@ -36,6 +36,11 @@
     transition: width .3s;
 }
 
+.cart__page .cart__empty::after {
+    width: 29%;
+    margin-bottom: 8rem;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -64,9 +69,10 @@ td select {
     border: 1px solid rgb(184, 182, 182);
 }
 
-td a {
+td span {
     color: #2bbadd;
     font-size: 12px;
+    cursor: pointer;
 }
 
 td img {
