@@ -24,6 +24,10 @@ function ProductDetails(props) {
         }
     }, []);
 
+    const handleAddToCart = () => {
+        props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
+    };
+
     return (
         <div>
             <Menu />
@@ -42,8 +46,8 @@ function ProductDetails(props) {
                         <img src={product.image} alt=""/>
                         <p>{product.description}</p>
                         <span>${product.price}</span>
-                        <h3>Size :</h3>
-                        {/* <select onChange={(e) => { setSize(e.target.value) }}>
+                        {/* <h3>Size :</h3>
+                        <select onChange={(e) => { setSize(e.target.value) }}>
                             <option>Select your size</option>
                             {[...Array(product.sizes).keys()].map(x => 
                                 <option key={x} value={x}>{x} EU/FR</option>
@@ -55,9 +59,7 @@ function ProductDetails(props) {
                                 <option value={x+1}>{x + 1}</option>
                             )}
                         </select>
-                        <Link>
-                            <button>Buy Now</button>
-                        </Link>
+                        <button onClick={handleAddToCart}>Buy Now</button>
                     </div>
                     )
                 }
