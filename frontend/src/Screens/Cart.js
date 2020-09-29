@@ -68,11 +68,11 @@ function Cart(props) {
                         <div class="cart__totalPrice">
                             <table>
                                 <tr>
-                                    <td>Total :</td>
+                            <td><b>Total</b> ({cartItems.reduce((a, c) => a + c.qty, 0)} products) :</td>
                                     <td>${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</td>
                                 </tr>
                                 <div class="cart__btn">
-                                    <button className="btn cart__checkout">Checkout</button>
+                                    <button className="btn cart__checkout" disabled={cartItems.length === 0}>Checkout</button>
 
                                 </div>
                                         
