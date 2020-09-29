@@ -30,7 +30,7 @@ function Cart(props) {
         
             <section className="cart__page">
                 {
-                cartItems === 0 ?
+                cartItems.length === 0 ?
                 <h1>Your cart is empty</h1>
                 :
                 <div>
@@ -69,7 +69,7 @@ function Cart(props) {
                             <table>
                                 <tr>
                                     <td>Total :</td>
-                                    <td>$115.00</td>
+                                    <td>${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</td>
                                 </tr>
                                 <div class="cart__btn">
                                     <button className="btn cart__checkout">Checkout</button>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/ProductDetails.css';
-import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
 import Menu from '../Components/Menu';
@@ -9,7 +8,7 @@ import Footer from '../Components/Footer';
 
 function ProductDetails(props) {
 
-    const [ size, setSize ] = useState(0);
+    /* const [ size, setSize ] = useState(0); */
     const [ qty, setQty ] = useState(1);
 
     const productDetails = useSelector(state => state.productDetails);
