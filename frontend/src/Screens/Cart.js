@@ -13,12 +13,12 @@ function Cart(props) {
     const { cartItems } = cart;
 
     const productId = props.match.params.id;
-    const size = props.location.search? Number(props.location.search.split("=")[1]) : 1;
+    const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
     const dispatch = useDispatch();
 
     useEffect(() => {
         if (productId) {
-            dispatch(addToCart(productId, size))
+            dispatch(addToCart(productId, qty))
         }
     }, []);
 
@@ -29,60 +29,47 @@ function Cart(props) {
 
         
             <section className="cart__page">
-                {
-                cartItems.length === 0 ?
-                <h1>Your cart is empty</h1>
-                :
-                cartItems.map(item => 
-                <div>
-                    <h1>My Cart</h1>
+                <h1>My Cart</h1>
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div className="cart__info">
+                                <img src="../imgs/shoe-2.png" alt='' />
+                                <div>
+                                    <p>Puma Clyde Core</p>
+                                    <small>Size : 40</small><br/>
+                                    <a href="">Remove</a>
+                                </div>
+
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"/></td>
+                        <td>$115</td>
+                        <td>$115</td>
+                    </tr>
+                </table>
+
+                <div class="cart__totalPrice">
                     <table>
                         <tr>
-                            <th>Product</th>
-                            <th>Qty</th>
-                            <th>Price</th>
-                            <th>Total</th>
+                            <td>Total :</td>
+                            <td>$115.00</td>
                         </tr>
+                        <div class="cart__btn">
+                            <button className="btn cart__checkout">Checkout</button>
 
-
-                        <tr>
-                            <div>
-                                <td>
-                                    <div className="cart__info">
-                                        <img src={item.image} alt='product' />
-                                        <div>
-                                            <p>{item.name}</p>
-                                            <small>Size : {item.size}</small><br/>
-                                            <a href="">Remove</a>
-                                        </div>
-
-                                    </div>
-                                </td>
-                                <td><input type="number" value=""/></td>
-                                <td>{item.price}</td>
-                                <td>{item.price}</td>
-                            </div>
-                        
-                        </tr>
-                    </table>
-
-                    <div class="cart__totalPrice">
-                        <table>
-                            <tr>
-                                <td>Total :</td>
-                                <td>$115.00</td>
-                            </tr>
-                            <div class="cart__btn">
-                                <button className="btn cart__checkout">Checkout</button>
-
-                            </div>
-                                    
+                        </div>
                                 
-                        </table>
-                    </div>
+                            
+                    </table>
                 </div>
-                )
-            }
             </section>
             
             <section>

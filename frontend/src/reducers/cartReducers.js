@@ -1,8 +1,8 @@
-import { CART_ADD_ITEM } from '../constants/cartConstants';
+import { ADD_TO_CART } from '../constants/cartConstants';
 
 function cartReducer(state= { cartItems:[] }, action) {
     switch (action.type) {
-        case CART_ADD_ITEM: 
+        case ADD_TO_CART: 
             const item = action.payload;
             const product = state.cartItems.find(x => x.product === item.product);
             if (product) {
@@ -14,7 +14,7 @@ function cartReducer(state= { cartItems:[] }, action) {
             return { cartItems: [...state.cartItems, item] };
             default : 
                 return state;
-    }
+    } 
 };
 
 export { cartReducer };
