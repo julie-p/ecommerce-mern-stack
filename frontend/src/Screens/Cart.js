@@ -26,6 +26,10 @@ function Cart(props) {
         dispatch(removeFromCart(productId));
     };
 
+    const checkoutHandler = () => {
+        props.history.push('/signin?redirect=shipping');
+    };
+
     return (
         <div>
             <Menu />
@@ -82,7 +86,12 @@ function Cart(props) {
                                     <td>${cartItems.reduce((a, c) => a + c.price * c.qty, 0)}</td>
                                 </tr>
                                 <div class="cart__btn">
-                                    <button className="btn cart__checkout" disabled={cartItems.length === 0}>Checkout</button>
+                                    <button 
+                                        onClick={checkoutHandler}
+                                        className="btn cart__checkout" 
+                                        disabled={cartItems.length === 0}>
+                                        Checkout
+                                    </button>
 
                                 </div>
                                         
