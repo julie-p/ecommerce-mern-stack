@@ -106,12 +106,23 @@ th:last-child {
 .cart__checkout {
     background: linear-gradient(125deg, #2bbadd, #c2e9e4);
     border: none;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
     margin: 2rem 0;
-    margin-left: 11rem;
+    margin-left: 12.2rem;
     padding: 1rem 0;
     width: 60%;
     border-radius: 40px;
     cursor: pointer;
+    outline: none;
+}
+
+.cart__checkout:active{
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
 }
 
 @media screen and (max-width: 850px) {

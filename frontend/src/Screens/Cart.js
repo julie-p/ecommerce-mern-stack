@@ -88,7 +88,7 @@ function Cart(props) {
                                 <div class="cart__btn">
                                     <button 
                                         onClick={checkoutHandler}
-                                        className="btn cart__checkout" 
+                                        className="cart__checkout" 
                                         disabled={cartItems.length === 0}>
                                         Checkout
                                     </button>

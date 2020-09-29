@@ -55,14 +55,14 @@ section {
   background: var(--clr-accent, blue);
   border-radius: .25em;
   -webkit-transition: opacity 250ms linear,
- -webkit-transform 250ms ease-in-out;
+  -webkit-transform 250ms ease-in-out;
   transition: opacity 250ms linear,
- -webkit-transform 250ms ease-in-out;
+  -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out,
- opacity 250ms linear;
+  opacity 250ms linear;
   transition: transform 250ms ease-in-out,
- opacity 250ms linear,
- -webkit-transform 250ms ease-in-out;
+  opacity 250ms linear,
+  -webkit-transform 250ms ease-in-out;
 }
 
 .btn:hover,
