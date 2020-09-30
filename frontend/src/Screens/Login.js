@@ -39,7 +39,7 @@ function Signin() {
 
                             <h6>First time ?</h6>
                             <div>
-                                <a onClick={handleClick}  className="login__link link-underline">Create your account</a>
+                                <a onClick={handleClick}  className="login__link">Create your account</a>
                             </div>  
                         </div>
                     </section>

@@ -46,7 +46,7 @@ section#signin.login {
     color: #26a7c7;
 }
 
-.login__container a {
+.login__container .login__link {
     color: #fff;
     background-color: transparent;
     border: none;
@@ -57,7 +57,7 @@ section#signin.login {
     position: relative;
 }
 
-.login__container a::after {
+.login__container .login__link::after {
     content: '';
     position: absolute;
     bottom: -3px;
@@ -71,7 +71,7 @@ section#signin.login {
     transition: transform .3s;
 }
 
-.login__container a:hover::after {
+.login__container .login__link:hover::after {
     transform: scaleX(1);  
 } 
 
