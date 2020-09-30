@@ -43,9 +43,7 @@ function Login() {
             </div>
 
             <button type="button">
-                <Link to="/">
-                    <FontAwesomeIcon icon={faArrowRight} />
-                </Link>
+                <FontAwesomeIcon icon={faArrowRight} />
             </button>
         </div>
     )

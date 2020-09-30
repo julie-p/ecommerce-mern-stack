@@ -2,7 +2,13 @@
     background: url(../imgs/shoe-2.png), radial-gradient(rgba(221, 221, 221, 0.856), #eee);
     background-repeat: no-repeat;
     background-position: center center;
-    height: auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section#signup.login,
+section#signin.login {
+    padding: 4rem 0;
 }
 
 .login {
@@ -15,10 +21,10 @@
 .login__container {
     background: linear-gradient(125deg, #2bbadd, #c2e9e4); 
     width: 600px;
+    margin: 0;
     padding: 80px;
     text-align: center;
     box-shadow: 0 0 20px #00000060;
-    height: 550px;
 }
 
 .login__container h1 {
@@ -40,7 +46,7 @@
     color: #26a7c7;
 }
 
-.login__container a {
+.login__container span {
     color: #fff;
     background-color: transparent;
     border: none;
@@ -51,7 +57,7 @@
     position: relative;
 }
 
-.login__container a::after {
+.login__container span::after {
     content: '';
     position: absolute;
     bottom: -3px;
@@ -65,7 +71,7 @@
     transition: transform .3s;
 }
 
-.login__container a:hover::after {
+.login__container span:hover::after {
     transform: scaleX(1);  
 } 
 
@@ -173,5 +179,9 @@ label {
 @media (max-width: 45em) {
     .login__container {
         height: 650px;
+    }
+
+    .login__container h1 {
+        font-size: 38px;
     }
 }
