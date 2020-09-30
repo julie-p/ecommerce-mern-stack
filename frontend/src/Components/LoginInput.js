@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
@@ -42,7 +43,9 @@ function Login() {
             </div>
 
             <button type="button">
-                <FontAwesomeIcon icon={faArrowRight} />
+                <Link to="/">
+                    <FontAwesomeIcon icon={faArrowRight} />
+                </Link>
             </button>
         </div>
     )

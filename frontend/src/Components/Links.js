@@ -18,9 +18,7 @@ function Links() {
 
     return (
         <div className="links__cart">
-            <Link className={className}>Login</Link>
-            <span>/</span>
-            <Link className={className}>Create your account</Link>
+            <Link to="/login/" className={className}>Login</Link>
         </div>
     )
 };
