@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 function Login() {
+
+    const [ passwordShow, setPasswordShow ] = useState(false);
+
     return (
         <div className="login__txtb">
             <div>
@@ -18,12 +21,19 @@ function Login() {
             </div>
 
             <div>
+                <div className="password-icon">
+                    <FontAwesomeIcon 
+                        icon={passwordShow ? faEyeSlash : faEye} 
+                        onClick={() => setPasswordShow(passwordShow => !passwordShow)} 
+                    />
+                </div>
                 <input 
                     className="login__input"
-                    name="password" 
-                    type="password" 
-                    autoComplete="off" 
-                    required/>
+                    type={passwordShow ? "text" : "password"}
+                    name="password"
+                    autoComplete="off"
+                    required
+                />
                 <label for="password" className="label-name">
                     <span className="content-name">
                         Password
