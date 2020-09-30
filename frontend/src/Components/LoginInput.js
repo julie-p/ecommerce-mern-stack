@@ -42,8 +42,10 @@ function Login() {
                 </label>
             </div>
 
-            <button type="button">
-                <FontAwesomeIcon icon={faArrowRight} />
+            <button type="submit">
+                <Link to="/" style={{color: "#fff"}}>
+                    <FontAwesomeIcon icon={faArrowRight} />
+                </Link>
             </button>
         </div>
     )
