@@ -24,7 +24,7 @@ function Signin() {
 
                             <h6>Already one of us ?</h6>
                             <div>
-                                <span onClick={handleClick} className="login__link link-underline">Login to your account</span>
+                                <a onClick={handleClick} className="login__link link-underline">Login to your account</a>
                             </div>  
                         </div>
                     </section>
@@ -39,7 +39,7 @@ function Signin() {
 
                             <h6>First time ?</h6>
                             <div>
-                                <span onClick={handleClick}  className="login__link link-underline">Create your account</span>
+                                <a onClick={handleClick}  className="login__link link-underline">Create your account</a>
                             </div>  
                         </div>
                     </section>

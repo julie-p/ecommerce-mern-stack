@@ -46,7 +46,7 @@ section#signin.login {
     color: #26a7c7;
 }
 
-.login__container span {
+.login__container a {
     color: #fff;
     background-color: transparent;
     border: none;
@@ -57,7 +57,7 @@ section#signin.login {
     position: relative;
 }
 
-.login__container span::after {
+.login__container a::after {
     content: '';
     position: absolute;
     bottom: -3px;
@@ -71,7 +71,7 @@ section#signin.login {
     transition: transform .3s;
 }
 
-.login__container span:hover::after {
+.login__container a:hover::after {
     transform: scaleX(1);  
 } 
 
@@ -117,7 +117,6 @@ label {
     left: 10px;
     font-size: 13px;
     letter-spacing: 1px;
-    opacity: .3;
 }
 
 .content-name {
@@ -125,6 +124,8 @@ label {
     bottom: 35px;
     left: 15px;
     transition: all 0.3s ease;
+    color: #26a7c7;
+    opacity: .8;
 }
 
 .login__input:focus + .label-name .content-name, 
@@ -132,13 +133,13 @@ label {
     transform: translateY(-220%);
     color: #fff;
     font-weight: 700;
-    font-style: italic;
+    opacity: .7;
 }
 
 .password-icon {
     font-size: 14px;
-    color: #636e72;
-    opacity: .4;
+    color: #26a7c7;
+    opacity: .5;
     cursor: pointer;
     float: right;
     top: 48px;
