@@ -108,10 +108,10 @@
 label {
     position: absolute;
     bottom: 20px;
-    left: 0px;
+    left: 10px;
     font-size: 13px;
     letter-spacing: 1px;
-    opacity: .6;
+    opacity: .3;
 }
 
 .content-name {
@@ -130,12 +130,12 @@ label {
 }
 
 .password-icon {
-    font-size: 12px;
+    font-size: 14px;
     color: #636e72;
-    opacity: .6;
+    opacity: .4;
     cursor: pointer;
     float: right;
-    top: 45px;
+    top: 48px;
     margin-right: 20px;
     z-index: 1;
 }
