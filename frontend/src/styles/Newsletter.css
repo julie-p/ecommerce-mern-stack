@@ -52,7 +52,10 @@
     padding-right: 80px;
     outline: none;
     font-size: 15px;
-    color: #636e72;
+}
+
+.newsletter__txtb input:focus {
+    color: #fff;
 }
 
 ::placeholder {

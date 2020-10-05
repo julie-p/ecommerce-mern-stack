@@ -10,6 +10,7 @@ import ProductDetails from './Screens/ProductDetails';
 import Cart from './Screens/Cart';
 
 function App() {
+
   return (
       <Router>
         <Switch>
