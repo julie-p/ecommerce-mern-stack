@@ -17,26 +17,23 @@ function Login(props) {
     const [ passwordSignup, setPasswordSignup ] = useState('');
     const userSignin = useSelector(state => state.userSignin);
     const userSignup = useSelector(state => state.userSignup);
-    const { loading, userInfo, error } = { userSignin, userSignup };
+    const { loading, userInfo, error } = [ userSignin, userSignup ];
     const dispatch = useDispatch();
 
     useEffect(() => {
         if (userInfo) {
             props.history.push('/');
         };
-        return () => {
-            //
-        }
     }, [userInfo]);
-
-    const handleSubmitSignin = (e) => {
-        e.preventDefault();
-        dispatch(signin(emailSignin, passwordSignin));
-    };
 
     const handleSubmitSignup = (e) => {
         e.preventDefault();
         dispatch(signup(emailSignup, passwordSignup));
+    };
+
+    const handleSubmitSignin = (e) => {
+        e.preventDefault();
+        dispatch(signin(emailSignin, passwordSignin));
     };
 
     const handleClick = () => {
