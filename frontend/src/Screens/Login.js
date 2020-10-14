@@ -57,7 +57,6 @@ function Login(props) {
                                     className="login__input"
                                     onChange={(e) => setEmail(e.target.value)}
                                     name="email"
-                                    autoComplete="off"
                                     required
                                 /> 
                                 <label htmlFor="email" className="label-name">
@@ -119,7 +118,6 @@ function Login(props) {
                                     className="login__input"
                                     onChange={(e) => setEmail(e.target.value)}
                                     name="email"
-                                    autoComplete="off"
                                     required
                                 /> 
                                 <label htmlFor="email" className="label-name">

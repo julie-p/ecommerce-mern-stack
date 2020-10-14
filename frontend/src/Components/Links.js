@@ -1,8 +1,14 @@
 import React from 'react';
 import '../styles/Links.css';
 import { Link, useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 function Links() {
+
+    const userSignin = useSelector(state => state.userSignin);
+    const { loading, userInfo, error } = userSignin;
 
     let location = useLocation();
 
@@ -17,8 +23,15 @@ function Links() {
     }
 
     return (
-        <div className="links__cart">
-            <Link to="/login/" className={className}>Login</Link>
+        <div className="links">
+            { userInfo ?
+                <Link className={className}>
+                    <FontAwesomeIcon icon={faUserCircle} className="links__icon" />
+                </Link>
+            :
+                <Link to="/login/" className={className}>Login</Link>
+            }
+            
         </div>
     )
 };

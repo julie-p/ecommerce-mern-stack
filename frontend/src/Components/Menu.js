@@ -53,9 +53,9 @@ function Menu() {
                 <div className="bar half end"></div>
             </div>
 
-            <Link to="/cart" className="menu__icon">
-                <FontAwesomeIcon icon={faShoppingBasket} />
-            </Link>
+                <Link to="/cart" className="menu__icon">
+                    <FontAwesomeIcon icon={faShoppingBasket} />
+                </Link>
 
             <nav className={topNav}>
                 <ul className="menu__navList">
