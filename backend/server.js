@@ -15,7 +15,6 @@ mongoose.connect(mongodbUrl, {
     useCreateIndex: true
 }).catch(error => console.log(error.reason));
 
-
 const app = express();
 
 app.use(bodyParser.json());

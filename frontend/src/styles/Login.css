@@ -177,6 +177,10 @@ label {
             transform: scale(0.65);
 }
 
+.login__error {
+    color: #d63031;
+}
+
 @media (max-width: 45em) {
     .login__container {
         height: 650px;

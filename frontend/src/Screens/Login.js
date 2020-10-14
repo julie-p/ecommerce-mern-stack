@@ -107,7 +107,7 @@ function Login(props) {
 
                         <div>
                             {loading && <div>Loading...</div>}
-                            {error && <div>{error}</div>}
+                            {error && <div className="login__error">{error}</div>}
                         </div>
 
                         <form 
