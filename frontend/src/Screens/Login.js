@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { signin } from '../actions/userActions';
+import { signin, signup } from '../actions/userActions';
 import "../styles/Login.css";
 import ReactCardFlip from 'react-card-flip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,10 +11,13 @@ function Login(props) {
 
     const [ isFlipped, setIsFlipped ] = useState(false);
     const [ passwordShow, setPasswordShow ] = useState(false);
-    const [ email, setEmail ] = useState('');
-    const [ password, setPassword ] = useState('');
+    const [ emailSignin, setEmailSignin ] = useState('');
+    const [ emailSignup, setEmailSignup ] = useState('');
+    const [ passwordSignin, setPasswordSignin ] = useState('');
+    const [ passwordSignup, setPasswordSignup ] = useState('');
     const userSignin = useSelector(state => state.userSignin);
-    const { loading, userInfo, error } = userSignin;
+    const userSignup = useSelector(state => state.userSignup);
+    const { loading, userInfo, error } = { userSignin, userSignup };
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -28,11 +31,12 @@ function Login(props) {
 
     const handleSubmitSignin = (e) => {
         e.preventDefault();
-        dispatch(signin(email, password));
+        dispatch(signin(emailSignin, passwordSignin));
     };
 
     const handleSubmitSignup = (e) => {
-
+        e.preventDefault();
+        dispatch(signup(emailSignup, passwordSignup));
     };
 
     const handleClick = () => {
@@ -48,6 +52,11 @@ function Login(props) {
 
                         <p>Create your account</p>
 
+                        <div>
+                            {loading && <div>Loading...</div>}
+                            {error && <div className="login__error">{error}</div>}
+                        </div>
+
                         <form 
                             className="login__txtb"
                             onSubmit={handleSubmitSignup}
@@ -55,7 +64,7 @@ function Login(props) {
                             <div>
                                 <input 
                                     className="login__input"
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e) => setEmailSignup(e.target.value)}
                                     name="email"
                                     required
                                 /> 
@@ -73,7 +82,7 @@ function Login(props) {
                                 </div>
                                 <input 
                                     className="login__input"
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    onChange={(e) => setPasswordSignup(e.target.value)}
                                     type={passwordShow ? "text" : "password"}
                                     name="password"
                                     autoComplete="off"
@@ -116,7 +125,7 @@ function Login(props) {
                             <div>
                                 <input 
                                     className="login__input"
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e) => setEmailSignin(e.target.value)}
                                     name="email"
                                     required
                                 /> 
@@ -134,7 +143,7 @@ function Login(props) {
                                 </div>
                                 <input 
                                     className="login__input"
-                                    onChange={(e) => setPassword(e.target.value)}
+                                    onChange={(e) => setPasswordSignin(e.target.value)}
                                     type={passwordShow ? "text" : "password"}
                                     name="password"
                                     autoComplete="off"

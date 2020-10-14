@@ -37,4 +37,24 @@ router.post('/signin', async (req, res) => {
     }
 });
 
+router.post('/signup', async (req, res) => {
+    const user = new User({ 
+        email: req.body.email, 
+        password: req.body.password
+    });
+
+    const newUser = await user.save();
+
+    if (newUser) {
+        res.send({
+            _id: newUser._id,
+            email: newUser.email,
+            isAdmin: newUser.isAdmin,
+            token: getToken(newUser)
+        })
+    } else {
+        res.status(401).send({ msg: 'Invalid email or password' });
+    };
+});
+
 export default router;
