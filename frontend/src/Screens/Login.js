@@ -1,11 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { signin } from '../actions/userActions';
 import "../styles/Login.css";
-import Login from '../Components/LoginInput';
 import ReactCardFlip from 'react-card-flip';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
-function Signin() {
+function Login(props) {
 
     const [ isFlipped, setIsFlipped ] = useState(false);
+    const [ passwordShow, setPasswordShow ] = useState(false);
+    const [ email, setEmail ] = useState('');
+    const [ password, setPassword ] = useState('');
+    const userSignin = useSelector(state => state.userSignin);
+    const { loading, userInfo, error } = userSignin;
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (userInfo) {
+            props.history.push('/');
+        };
+        return () => {
+            //
+        }
+    }, [userInfo]);
+
+    const handleSubmitSignin = (e) => {
+        e.preventDefault();
+        dispatch(signin(email, password));
+    };
+
+    const handleSubmitSignup = (e) => {
+
+    };
 
     const handleClick = () => {
         setIsFlipped(!isFlipped);
@@ -20,11 +48,53 @@ function Signin() {
 
                         <p>Create your account</p>
 
-                        <Login />
+                        <form 
+                            className="login__txtb"
+                            onSubmit={handleSubmitSignup}
+                        >
+                            <div>
+                                <input 
+                                    className="login__input"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    name="email"
+                                    autoComplete="off"
+                                    required
+                                /> 
+                                <label htmlFor="email" className="label-name">
+                                    <span className="content-name">Email</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <div className="password-icon">
+                                    <FontAwesomeIcon 
+                                        icon={passwordShow ? faEyeSlash : faEye} 
+                                        onClick={() => setPasswordShow(passwordShow => !passwordShow)} 
+                                    />
+                                </div>
+                                <input 
+                                    className="login__input"
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    type={passwordShow ? "text" : "password"}
+                                    name="password"
+                                    autoComplete="off"
+                                    required
+                                />
+                                <label htmlFor="password" className="label-name">
+                                    <span className="content-name">
+                                        Password
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button type="submit">
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </button>
+                        </form>
 
                         <h6>Already one of us ?</h6>
                         <div>
-                            <a onClick={handleClick} className="login__link link-underline">Login to your account</a>
+                            <Link onClick={handleClick} className="login__link link-underline">Login to your account</Link>
                         </div>  
                     </div>
                 </section>
@@ -35,11 +105,58 @@ function Signin() {
 
                         <p>Login to your account</p>
 
-                        <Login />                    
+                        <div>
+                            {loading && <div>Loading...</div>}
+                            {error && <div>{error}</div>}
+                        </div>
+
+                        <form 
+                            className="login__txtb"
+                            onSubmit={handleSubmitSignin}
+                        >
+                            <div>
+                                <input 
+                                    className="login__input"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    name="email"
+                                    autoComplete="off"
+                                    required
+                                /> 
+                                <label htmlFor="email" className="label-name">
+                                    <span className="content-name">Email</span>
+                                </label>
+                            </div>
+
+                            <div>
+                                <div className="password-icon">
+                                    <FontAwesomeIcon 
+                                        icon={passwordShow ? faEyeSlash : faEye} 
+                                        onClick={() => setPasswordShow(passwordShow => !passwordShow)} 
+                                    />
+                                </div>
+                                <input 
+                                    className="login__input"
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    type={passwordShow ? "text" : "password"}
+                                    name="password"
+                                    autoComplete="off"
+                                    required
+                                />
+                                <label htmlFor="password" className="label-name">
+                                    <span className="content-name">
+                                        Password
+                                    </span>
+                                </label>
+                            </div>
+
+                            <button type="submit">
+                                <FontAwesomeIcon icon={faArrowRight} />
+                            </button>
+                        </form>                    
 
                         <h6>First time ?</h6>
                         <div>
-                            <a onClick={handleClick}  className="login__link">Create your account</a>
+                            <Link onClick={handleClick}  className="login__link">Create your account</Link>
                         </div>  
                     </div>
                 </section>
@@ -49,4 +166,4 @@ function Signin() {
     )
 };
 
-export default Signin;
+export default Login;
