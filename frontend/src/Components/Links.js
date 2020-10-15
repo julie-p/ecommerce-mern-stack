@@ -8,7 +8,9 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 function Links() {
 
     const userSignin = useSelector(state => state.userSignin);
-    const { loading, userInfo, error } = userSignin;
+    const userSignup = useSelector(state => state.userSignup);
+    const { loading, userInfoSignin, error } = userSignin;
+    const { loader, userInfoSignup, err } = userSignup;
 
     let location = useLocation();
 
@@ -24,7 +26,7 @@ function Links() {
 
     return (
         <div className="links">
-            { userInfo ?
+            { userInfoSignin || userInfoSignup ?
                 <Link className={className}>
                     <FontAwesomeIcon icon={faUserCircle} className="links__icon" />
                 </Link>

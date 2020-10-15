@@ -12,7 +12,7 @@ function userSigninReducer(state = {}, action) {
         case USER_SIGNIN_REQUEST:
             return { loading: true };
         case USER_SIGNIN_SUCCESS:
-            return { loading: false, userInfo: action.payload };
+            return { loading: false, userInfoSignin: action.payload };
         case USER_SIGNIN_ERROR:
             return { loading: false, error: action.payload };
         default: 
@@ -23,11 +23,11 @@ function userSigninReducer(state = {}, action) {
 function userSignupReducer(state = {}, action) {
     switch (action.type) {
         case USER_SIGNUP_REQUEST:
-            return { loading: true };
+            return { loader: true };
         case USER_SIGNUP_SUCCESS:
-            return { loading: false, userInfo: action.payload };
+            return { loader: false, userInfoSignup: action.payload };
         case USER_SIGNUP_ERROR:
-            return { loading: false, error: action.payload };
+            return { loader: false, err: action.payload };
         default: 
             return state;
     }

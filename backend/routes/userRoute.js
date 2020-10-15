@@ -4,7 +4,7 @@ import { getToken } from '../util';
 
 const router = express.Router();
 
-router.get("/createadmin", async (req, res) => {
+router.get('/createadmin', async (req, res) => {
     try {
         const user = new User({ 
             email: 'paupertjulie@gmail.com',

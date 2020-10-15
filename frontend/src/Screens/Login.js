@@ -17,14 +17,18 @@ function Login(props) {
     const [ passwordSignup, setPasswordSignup ] = useState('');
     const userSignin = useSelector(state => state.userSignin);
     const userSignup = useSelector(state => state.userSignup);
-    const { loading, userInfo, error } = [ userSignin, userSignup ];
+    const { loading, userInfoSignin, error } = userSignin;
+    const { loader, userInfoSignup, err } = userSignup;
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if (userInfo) {
+        if (userInfoSignin) {
             props.history.push('/');
         };
-    }, [userInfo]);
+        if (userInfoSignup) {
+            props.history.push('/');
+        }
+    }, [userInfoSignin, userInfoSignup]);
 
     const handleSubmitSignup = (e) => {
         e.preventDefault();
@@ -50,8 +54,8 @@ function Login(props) {
                         <p>Create your account</p>
 
                         <div>
-                            {loading && <div>Loading...</div>}
-                            {error && <div className="login__error">{error}</div>}
+                            {loader && <div>Loading...</div>}
+                            {err && <div className="login__error">{err}</div>}
                         </div>
 
                         <form 
