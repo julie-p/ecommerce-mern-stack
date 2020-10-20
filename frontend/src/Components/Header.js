@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/Header.css';
 import Links from './Links';
 import { Link, useLocation } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 function Header() {
 
@@ -37,12 +38,14 @@ function Header() {
     return (
         <header className={header}>
             <Links />
-            <div className="container spacing">
-                {h1}
-                <p className={paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium
-                    quidem enim sit sequi!</p>
-                <Link to="/shop" className={btn}>See what we have</Link>
-            </div>
+            <Fade bottom cascade>
+                <div className="container spacing">
+                    {h1}
+                    <p className={paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam perspiciatis facilis beatae laudantium
+                        quidem enim sit sequi!</p>
+                    <Link to="/shop" className={btn}>See what we have</Link>
+                </div>
+            </Fade>
         </header>
     )
 };

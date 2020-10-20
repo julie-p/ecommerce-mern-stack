@@ -3,7 +3,7 @@ import "../styles/Cards.css";
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
-
+import Fade from 'react-reveal/Fade';
 
 function CardsDiscount() {
 
@@ -23,7 +23,7 @@ function CardsDiscount() {
         error ? 
         <div>{error}</div> 
         :
-        <div>
+        <Fade left cascade>
             <div className="cards__container">
             {
                 Array.from(products).map((product, key) => {
@@ -73,8 +73,8 @@ function CardsDiscount() {
                     }
                 })
             }
-        </div>
-        </div>
+            </div>
+        </Fade>
     )
 };
 

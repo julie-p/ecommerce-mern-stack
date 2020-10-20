@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
+import Fade from 'react-reveal/Fade';
 
 function ProductsHome() {
 
@@ -25,26 +26,32 @@ function ProductsHome() {
                 <h2 className="section-title">Our products</h2>
                 {Array.from(products).map((product, key) => {
                     if (!product.featured && product.name === 'Vans Old Skool') {
-                        return  <article className="product shoe-red spacing">
-                                    <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
-                                    <h3 className="products__title">A really nice shoe</h3>
-                                    <p className="products__description">{product.description}</p>
-                                    <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
-                                </article>
+                        return  <Fade right cascade>
+                                    <article className="product shoe-red spacing">
+                                        <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
+                                        <h3 className="products__title">A really nice shoe</h3>
+                                        <p className="products__description">{product.description}</p>
+                                        <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
+                                    </article>
+                                </Fade>
                     } else if (!product.featured && product.name === 'Puma Clyde Core') {
-                        return  <article className="product shoe-white shoe-left spacing">
-                                    <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
-                                    <h3 className="products__title">A really nice shoe</h3>
-                                    <p className="products__description">{product.description}</p>
-                                    <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
-                                </article>
+                        return  <Fade left cascade>
+                                    <article className="product shoe-white shoe-left spacing">
+                                        <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
+                                        <h3 className="products__title">A really nice shoe</h3>
+                                        <p className="products__description">{product.description}</p>
+                                        <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
+                                    </article>
+                                </Fade>
                     } else if (!product.featured && product.name === 'Louis Vuitton Sneakers') {
-                        return  <article className="product shoe-blue spacing">
-                                    <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
-                                    <h3 className="products__title">A really nice shoe</h3>
-                                    <p className="products__description">{product.description}</p>
-                                    <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
-                                </article>
+                        return  <Fade right cascade>
+                                    <article className="product shoe-blue spacing">
+                                        <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
+                                        <h3 className="products__title">A really nice shoe</h3>
+                                        <p className="products__description">{product.description}</p>
+                                        <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
+                                    </article>
+                                </Fade>
                     }
                 })}
             </div>

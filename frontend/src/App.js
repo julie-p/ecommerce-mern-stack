@@ -15,17 +15,11 @@ function App() {
       <Router>
         <Switch>
           <Route path='/login/' component={Login} />
-          <motion.div 
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            transition={{duration: .5}}
-          >
             <Route path='/' exact component={Homepage}/>
             <Route path='/shop/' component={Shop} />
             <Route path='/sales/' component={Outlet} />
             <Route path='/product-details/:id' component={ProductDetails} />
             <Route path='/cart/:id?' component={Cart} />
-          </motion.div>
         </Switch>
       </Router>
   )
