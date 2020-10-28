@@ -57,13 +57,6 @@ function Cards() {
                                                 </Link>
                                             </div>
                                         }
-                                            {/* <h3>Size :</h3>
-                                            <select onChange={(e) => { setSize(e.target.value) }}>
-                                                <option>Select your size</option>
-                                                {product.sizes.map(x => 
-                                                    <option key={x} value={x}>{x} EU/FR</option>
-                                                )}
-                                            </select> */}
                                     </div>
                                     
                                 </div>
