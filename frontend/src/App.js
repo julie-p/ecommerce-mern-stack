@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { motion } from "framer-motion";
 import Homepage from './Screens/Homepage';
 import Login from './Screens/Login';
 import Shop from './Screens/Shop';

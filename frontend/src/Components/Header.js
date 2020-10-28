@@ -27,7 +27,7 @@ function Header() {
         case '/sales' :
             header = "header__hero sales";
             btn += " btn-display";
-            h1 = <h1 className="header__primaryTitle title__alt">Mid season <span className="red">Sales</span> <br/> Up to 20% off</h1>;
+            h1 = <h1 className="header__primaryTitle title__alt">Mid season <span className="red">Sales</span> <br/> Up to <span className="red">20%</span> off</h1>;
             paragraph = "paragraph-display";
             break;
         default :

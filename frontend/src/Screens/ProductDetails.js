@@ -32,7 +32,7 @@ function ProductDetails(props) {
             <Menu />
             <Links/>
             
-            <section>
+            <section className="product-details">
                 {loading ? 
                     <div>Loading...</div>
                     :
@@ -40,31 +40,43 @@ function ProductDetails(props) {
                     <div>{error}</div>
                     :
                     (
-                    <div>
-                        <h1>{product.name}</h1>
-                        <img src={product.image} alt=""/>
-                        <p>{product.description}</p>
-                        <span>${product.price}</span>
-                        {/* <h3>Size :</h3>
-                        <select onChange={(e) => { setSize(e.target.value) }}>
-                            <option>Select your size</option>
-                            {[...Array(product.sizes).keys()].map(x => 
-                                <option key={x} value={x}>{x} EU/FR</option>
-                            )}
-                        </select> */}
-                        <h3>Quantity :</h3>
-                        <select value={qty} onChange={(e) => { setQty(e.target.value) }}>
-                            {[...Array(product.stock).keys()].map(x =>
-                                <option value={x+1}>{x + 1}</option>
-                            )}
-                        </select>
-                        {product.stock <= 0 ? 
-                        <button disabled>Out Of Stock</button>
-                        :
-                        <button onClick={handleAddToCart}>Buy Now</button>
-                        }
+                        <div className="product__container">
+                            <div className="product__img">
+                                <img src={product.image} alt=""/>
+                            </div>
+                            <div className="product__details">
+                                <div className="product__content">
+                                    <h2>{product.name}</h2>
+                                    <p>{product.description}</p>
+
+                                    <div className="product__quantity">
+                                        <h4>Quantity :</h4>
+                                        <select value={qty} onChange={(e) => { setQty(e.target.value) }}>
+                                            {[...Array(product.stock).keys()].map(x =>
+                                                <option value={x+1}>{x + 1}</option>
+                                            )}
+                                        </select>
+                                    </div>
+                                    
+                                    <h3>${product.price}</h3>
+                                    {product.stock <= 0 ? 
+                                    <button disabled>Out Of Stock</button>
+                                    :
+                                    <button onClick={handleAddToCart}>Buy Now</button>
+                                    }
+                                </div>
+
+                                {/* <h3>Size :</h3>
+                                <select onChange={(e) => { setSize(e.target.value) }}>
+                                    <option>Select your size</option>
+                                    {[...Array(product.sizes).keys()].map(x => 
+                                        <option key={x} value={x}>{x} EU/FR</option>
+                                    )}
+                                </select> */}
                         
-                    </div>
+                            </div>
+                        </div>
+                        
                     )
                 }
                 
