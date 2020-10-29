@@ -72,6 +72,10 @@ section {
   opacity: .9;
 }
 
+.spinner {
+  color: #2bbadd;
+}
+
 .split {
   display: -webkit-box;
   display: -ms-flexbox;

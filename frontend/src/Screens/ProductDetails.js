@@ -5,6 +5,7 @@ import { detailsProduct } from '../actions/productActions';
 import Menu from '../Components/Menu';
 import Links from '../Components/Links';
 import Footer from '../Components/Footer';
+import { Spinner } from 'reactstrap';
 
 function ProductDetails(props) {
 
@@ -34,7 +35,11 @@ function ProductDetails(props) {
             
             <section className="product-details">
                 {loading ? 
-                    <div>Loading...</div>
+                    <div>
+                        <Spinner type="grow" className="spinner" />
+                        <Spinner type="grow" className="spinner" />
+                        <Spinner type="grow" className="spinner" />
+                    </div>
                     :
                     error ?
                     <div>{error}</div>
