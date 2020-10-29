@@ -4,6 +4,13 @@
     background-position: center center;
     height: 100vh;
     overflow: hidden;
+    position: relative;
+}
+
+.back {
+    float: right;
+    margin: 2rem;
+    padding: 10rem;
 }
 
 section#signup.login,

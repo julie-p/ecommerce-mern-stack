@@ -76,6 +76,10 @@ section {
   color: #2bbadd;
 }
 
+.spinner .login {
+  color: #fff;
+}
+
 .split {
   display: -webkit-box;
   display: -ms-flexbox;

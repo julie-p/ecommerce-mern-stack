@@ -6,6 +6,7 @@ import "../styles/Login.css";
 import ReactCardFlip from 'react-card-flip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { Spinner } from 'reactstrap';
 
 function Login(props) {
 
@@ -54,7 +55,7 @@ function Login(props) {
                         <p>Create your account</p>
 
                         <div>
-                            {loader && <div>Loading...</div>}
+                            {loader && <Spinner type="grow" className="spinner login" />}
                             {err && <div className="login__error">{err}</div>}
                         </div>
 
@@ -115,7 +116,7 @@ function Login(props) {
                         <p>Login to your account</p>
 
                         <div>
-                            {loading && <div>Loading...</div>}
+                            {loading && <Spinner type="grow" className="spinner" />}
                             {error && <div className="login__error">{error}</div>}
                         </div>
 
@@ -170,7 +171,6 @@ function Login(props) {
                 </section>
             </ReactCardFlip>
         </div>
-        
     )
 };
 
