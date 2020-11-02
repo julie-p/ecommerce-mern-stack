@@ -1,9 +1,9 @@
 .menu__toggler {
     position: absolute;
-    top: 3rem;
+    top: 1.8rem;
     left: 3rem;
-    width: 3.5rem;
-    height: 2.4rem;
+    width: 2.9rem;
+    height: 1.8rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -56,9 +56,10 @@
 .menu__icon {
     display: flex;
     position: absolute;
-    top: 3.3rem;
-    left: 8.5rem;
-    font-size: 1.4rem;
+    top: 2.1rem;
+    left: 8rem;
+    font-size: 1.2rem;
+    font-weight: 300;
     color: #222;
     opacity: .7;
 }

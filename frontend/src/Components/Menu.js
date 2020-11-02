@@ -46,7 +46,7 @@ function Menu() {
     };
 
     return (
-        <div>
+        <div className="menu">
             <div className={menuToggler} isOpen={isOpen} onClick={()=> toggleMenu()}>
                 <div className="bar half start"></div>
                 <div className="bar"></div>
