@@ -30,7 +30,7 @@ function ProductsHome() {
                                     <article className="product shoe-red spacing">
                                         <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
                                         <h3 className="products__title">A really nice shoe</h3>
-                                        <p className="products__description">{product.description}</p>
+                                        <p className="products__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>
                                         <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
                                     </article>
                                 </Fade>
@@ -39,7 +39,7 @@ function ProductsHome() {
                                     <article className="product shoe-white shoe-left spacing">
                                         <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
                                         <h3 className="products__title">A really nice shoe</h3>
-                                        <p className="products__description">{product.description}</p>
+                                        <p className="products__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>
                                         <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
                                     </article>
                                 </Fade>
@@ -48,7 +48,7 @@ function ProductsHome() {
                                     <article className="product shoe-blue spacing">
                                         <img src={product.image} alt={product.name+ "__" + key} className="products__image"/>
                                         <h3 className="products__title">A really nice shoe</h3>
-                                        <p className="products__description">{product.description}</p>
+                                        <p className="products__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>
                                         <Link to={'/product-details/' + product._id} className="btn">Buy now</Link>
                                     </article>
                                 </Fade>
