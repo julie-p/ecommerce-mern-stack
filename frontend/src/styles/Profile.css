@@ -1,4 +1,4 @@
-.account {
+.account::before {
     content: '';
     position: absolute;
     top: 0;
@@ -11,4 +11,10 @@
     opacity: .7;
     z-index: -100;
     overflow-x: hidden;
+}
+
+@media screen and (max-width: 850px) {
+    .account::before {
+        clip-path: circle(420px at 90% 10%);
+    }
 }

@@ -1,17 +1,25 @@
 .links {
     position: absolute;
-    top: 2rem;
+    top: 1.4rem;
     right: 3rem;
 }
 
 .links:hover{
-    -webkit-transform: scale(1.7);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+    opacity: .9;
 } 
 
 .links__login {
-    color: #279cb9;
-    font-weight: 600;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    padding: .3em 1em;
+    background: #2bbadd;
+    border-radius: .25em;
 }
 
 .links__icon {
@@ -20,14 +28,17 @@
 
 .cart {
     color: #fff;
+    background: transparent;
 }
 
 .profile {
     color: #fff;
+    background: transparent;
 }
 
 .order {
     color: #fff;
+    background: transparent;
 }
 
 .cart::after {
@@ -35,11 +46,7 @@
 }
 
 @media screen and  (max-width: 600px) {
-    .links__cart {
-        top: 2rem;
-    }
-
-    .links__cart a {
-        font-size: .9rem;
+    .links {
+        right: 1rem;
     }
 }
