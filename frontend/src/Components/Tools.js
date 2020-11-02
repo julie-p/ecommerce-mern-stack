@@ -1,20 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Tools.css';
+import Filter from './Filter';
+import SearchBar from './SearchBar';
 import { useLocation } from 'react-router-dom';
 
 function Tools() {
-
-    const [ open, setOpen ] = useState(false);
-
-    let filter = "tools__dropdown";
-    switch (open) {
-        case true :
-            filter += " active";
-            break;
-        default :
-            filter = "tools__dropdown";
-            break;
-    };
 
     let location = useLocation();
 
@@ -34,24 +24,9 @@ function Tools() {
         <div className="tools__container">
             {h3}
 
-            <div className="tools__filter" open={open} onClick={() => setOpen(!open)}>
-                <h3 style={{display: open ? "none" : "block"}}>/Filter +/</h3>
-                <h3 style={{display: open ? "block" : "none"}}>/Filter -/</h3>
-                <div className={filter}>
-                    <ul>
-                        <li>Lowest price</li>
-                        <li>Highest price</li>
-                    </ul>
-            </div>
-            </div>
+           <Filter />
 
-
-            <div className="tools__searchBar">
-                <input type="search" name="search" className="tools__input" autoComplete="off" required/>
-                <label for="search" className="tools__label">
-                    <span className="tools__contentName">Search</span>
-                </label>
-            </div>
+            <SearchBar />
    
         </div>
     )
