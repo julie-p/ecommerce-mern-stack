@@ -150,19 +150,21 @@
 }
 
 @media screen and (max-width: 600px) {
-    .menu__toggler {
+    .menu-btn {
+        width: 30px;
+        height: 30px;
         top: 2rem;
-        left: 2rem;
-        width: 2.4rem;
-        height: 1.7rem;
     }
 
-    .open .bar.start {
-        transform: rotate(-450deg) translateX(.6rem);
+    .menu-btn__burger {
+        width: 30px;
+        height: 3px;
     }
 
-    .open .bar.end {
-        transform: rotate(-450deg) translateX(-.6rem); 
+    .menu-btn__burger::before, 
+    .menu-btn__burger::after {
+        width: 30px;
+        height: 3px;
     }
 
     .menu__icon {
