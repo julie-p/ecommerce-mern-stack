@@ -1,0 +1,14 @@
+.account {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12rem;
+    width: 100%;
+    height: 100%;
+    background: #2bbadd;
+    clip-path: circle(620px at 90% 10%);
+    transition: 0.5s ease-in-out;
+    opacity: .7;
+    z-index: -100;
+    overflow-x: hidden;
+}

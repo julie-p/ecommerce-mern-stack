@@ -22,6 +22,14 @@
     color: #fff;
 }
 
+.profile {
+    color: #fff;
+}
+
+.order {
+    color: #fff;
+}
+
 .cart::after {
     background: #fff;
 }

@@ -16,8 +16,14 @@ function Links() {
 
     let className = 'links__login';
     switch (location.pathname) {
-        case '/cart' :
+        case '/cart':
             className += ' cart';
+            break;
+        case '/profile':
+            className += ' profile';
+            break;
+        case '/order-history':
+            className += ' order';
             break;
         default : 
             className = "links__login";
@@ -27,7 +33,7 @@ function Links() {
     return (
         <div className="links">
             { userInfoSignin || userInfoSignup ?
-                <Link className={className}>
+                <Link to="/profile" className={className}>
                     <FontAwesomeIcon icon={faUserCircle} className="links__icon" />
                 </Link>
             :
