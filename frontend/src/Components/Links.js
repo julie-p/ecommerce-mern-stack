@@ -14,30 +14,35 @@ function Links() {
 
     let location = useLocation();
 
-    let className = 'links__login';
+    let login = 'links__login';
+    let profile = 'links__profile';
     switch (location.pathname) {
         case '/cart':
-            className += ' cart';
+            login += ' cart';
+            profile += ' cart';
             break;
         case '/profile':
-            className += ' profile';
+            login += ' profile';
+            profile += ' profile';
             break;
         case '/order-history':
-            className += ' order';
+            login += ' order';
+            profile += ' order';
             break;
         default : 
-            className = "links__login";
+            login = "links__login";
+            profile = 'links__profile';
             break;
     }
 
     return (
         <div className="links">
             { userInfoSignin || userInfoSignup ?
-                <Link to="/profile" className={className}>
+                <Link to="/profile" className={profile}>
                     <FontAwesomeIcon icon={faUserCircle} className="links__icon" />
                 </Link>
             :
-                <Link to="/login/" className={className}>Login</Link>
+                <Link to="/login/" className={login}>Login</Link>
             }
             
         </div>
