@@ -13,4 +13,4 @@ const getToken = (user) => {
 
 export { 
     getToken
-};
+}

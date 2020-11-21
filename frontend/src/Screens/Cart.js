@@ -35,7 +35,6 @@ function Cart(props) {
             <Menu />
             <Links />
 
-        
             <section className="cart__page">
                 {
                 cartItems.length === 0 ?
