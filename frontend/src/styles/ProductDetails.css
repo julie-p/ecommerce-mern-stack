@@ -43,6 +43,11 @@
 .product__container .product__img img {
     position: relative;
     width: 700px;
+    transition: all .5s;
+}
+
+.product__container .product__img img:hover {
+    transform: scale(1.1);
 }
 
 .product__container .product__details {

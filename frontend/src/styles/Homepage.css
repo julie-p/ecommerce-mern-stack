@@ -30,6 +30,11 @@
     -webkit-transform: scale(1);
             transform: scale(1);
 }
+
+.featured__item img:hover {
+    transform: scale(1.05);
+    transition: all .5s;
+}
   
 .featured__item:hover .featured__details, .featured__item:focus .featured__details {
     opacity: 1;
